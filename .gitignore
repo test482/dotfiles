@@ -5,6 +5,7 @@
 !.gitignore
 !.bashrc
 !.vimrc
+!README.md
 
 # top level dirs
 !/.config/
