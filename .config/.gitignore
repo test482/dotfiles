@@ -1,3 +1,4 @@
-!autostart
-!mpv
-!neofetch
+!/autostart/
+!/mpv/
+!/neofetch/
+!/systemd/
