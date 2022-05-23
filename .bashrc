@@ -19,6 +19,10 @@ alias grep='grep --color'
 alias k="kde-open5"
 alias x="xdg-open"
 
+# paru: aur helper
+alias a='paru --noconfirm'
+alias aSyu='a -Syu'
+
 # less : hightlight (-R) and line number (-N)
 export LESSOPEN="| /usr/bin/src-hilite-lesspipe.sh %s"
 export LESS="-R"
