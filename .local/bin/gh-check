@@ -105,7 +105,7 @@ async def main(proto):
   producer_fu = asyncio.ensure_future(producer(q, proto))
   printer_fu = asyncio.ensure_future(printer(ret_q))
 
-  await asyncio.wait(futures)
+  await asyncio.gather(*futures)
   printer_fu.cancel()
   await producer_fu
   await printer_fu
@@ -125,7 +125,7 @@ async def update_hosts():
   finder_fu = asyncio.ensure_future(
     fastest_finder(ret_q))
 
-  await asyncio.wait(futures)
+  await asyncio.gather(*futures)
   finder_fu.cancel()
   await producer_fu
   ip = await finder_fu
@@ -156,16 +156,20 @@ async def get_items(proto):
     ('13.229.188.59',  'Singapore'),
     ('13.250.177.223', 'Singapore'),
     ('52.74.223.119',  'Singapore'),
-    ('192.30.255.113', 'Seattle'),
     ('192.30.255.112', 'Seattle'),
+    ('192.30.255.113', 'Seattle'),
     ('140.82.112.3',   'Seattle'),
     ('140.82.112.4',   'Seattle'),
+    ('192.30.253.112', 'Ashburn'),
+    ('192.30.253.113', 'Ashburn'),
     ('140.82.113.3',   'Ashburn'),
     ('140.82.113.4',   'Ashburn'),
     ('140.82.114.3',   'Ashburn'),
     ('140.82.114.4',   'Ashburn'),
     ('140.82.118.3',   'Armsterdam'),
     ('140.82.118.4',   'Armsterdam'),
+    ('140.82.121.3',   'Frankfurt'),
+    ('140.82.121.4',   'Frankfurt'),
     ('13.237.44.5',    'Sydney'),
     ('52.64.108.95',   'Sydney'),
     ('13.236.229.21',  'Sydney'),
