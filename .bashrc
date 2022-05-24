@@ -20,10 +20,6 @@ alias grep='grep --color'
 alias k="kde-open5"
 alias x="xdg-open"
 
-# paru: aur helper
-alias a='paru --noconfirm'
-alias aSyu='a -Syu'
-
 # less : hightlight (-R) and line number (-N)
 export LESSOPEN="| /usr/bin/src-hilite-lesspipe.sh %s"
 export LESS="-R"
@@ -174,10 +170,14 @@ alias Fs="pacman -F"
 alias Fl="pacman -Fl"
 alias Fy="sudo pacman -Fy"
 alias Sy="sudo pacman -Sy"
-alias Ssa="pikaur -Ssa"
-alias Sas="pikaur -Ssa"
-alias Sia="pikaur -Sai"
-alias Sai="pikaur -Sai"
+
+# paru: aur helper
+alias a='paru --noconfirm'
+alias Syua="a -Syu"
+alias Ssa="a -Ssa"
+alias Sas="a -Ssa"
+alias Sia="a -Sai"
+alias Sai="a -Sai"
 
 man() {
 	env \
