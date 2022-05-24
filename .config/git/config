@@ -1,0 +1,14 @@
+[color]
+    diff = auto
+    status = auto
+    branch = auto
+    grep = auto
+    showbranch = auto
+[alias]
+    st = status
+    co = checkout
+    cm = commit
+    br = branch
+    last = log -1 --stat
+[log]
+    date = iso
