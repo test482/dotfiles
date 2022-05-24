@@ -17,6 +17,8 @@ alias lh='ls -lh'
 alias lf='ls -F'
 
 alias grep='grep --color'
+alias tree='tree -C'
+
 alias k="kde-open5"
 alias x="xdg-open"
 
@@ -29,7 +31,7 @@ alias glog="git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%
 # gitmydot
 # https://wiki.archlinux.org/title/Dotfiles#Tracking_dotfiles_directly_with_Git
 alias gitdot='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
-source /usr/share/bash-completion/completions/git
+[ -f /usr/share/bash-completion/completions/git ] && source /usr/share/bash-completion/completions/git
 __git_complete gitdot __git_main
 
 # ranger : A VIM-inspired filemanager for the console
@@ -190,6 +192,7 @@ man() {
 		LESS_TERMCAP_us=$(printf "\e[0;36m") \
 			man "$@"
 }
+alias cman="env LANG=zh_CN.UTF-8 man"
 
 # PS1='[\u@\h \W]\$ ' # default style
 # PS1='\[\e[1;32m\]\u\[\e[m\]\[\e[0;32m\]@\h\[\e[m\] \[\e[1;34m\]\w\[\e[m\] \[\e[1;32m\]\$\[\e[m\] ' # farseerfc style
