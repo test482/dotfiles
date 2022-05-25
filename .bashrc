@@ -129,21 +129,10 @@ alias pb="curl -F 'c=@-' 'https://fars.ee/'"
 
 # Search for console tips and tricks via https://cheat.sh service.
 # https://github.com/chubin/cheat.sh
+# example usage: cheat python say hello world
 cheat() {
-    if [ "$#" -eq 2 ]; then
-        case "$1" in
-        "py")
-            curl https://cheat.sh/python/"$2";
-            ;;
-        *)
-            curl https://cheat.sh/"$1"/"$2";
-            ;;
-        esac
-    elif [ "$#" -eq 1 ]; then
-        curl https://cheat.sh/"$1";
-    else
-        echo "param number not right, please check."
-    fi
+    local query=$(echo "$*" | sed 's@ *$@@; s@^ *@@; s@ @/@; s@ @+@g')
+    curl https://cheat.sh/"$query"
 }
 
 alias clipboard="xclip -selection clipboard"
