@@ -25,10 +25,13 @@ gitdot checktout
 gitdot config --local status.showUntrackedFiles no
 ```
 
-init some config frist
+init some config first
 
 ```bash
+# pacman
 sudo cp ~/.config/pacman/pacman.conf /etc/
 sudo cp ~/.config/pacman/hooks/* /etc/pacman.d/hooks/
 sudo pacman -Sy archlinuxcn-keyring
+# install pkgs
+sudo pacman -Sy $(< ~/.config/pacman/pkg-list/cli.txt) # or other pkgs
 ```
