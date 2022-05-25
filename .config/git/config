@@ -12,3 +12,6 @@
     last = log -1 --stat
 [log]
     date = iso
+[user]
+    email = eliotjoking@gmail.com
+    name = test482

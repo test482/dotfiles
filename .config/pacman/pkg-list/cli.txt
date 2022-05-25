@@ -1,0 +1,16 @@
+exa
+powerline
+powerline-common
+powerline-fonts
+powerline-vim
+python-powerline
+tree
+ranger
+fzf
+neofetch
+unarchiver
+vim
+paru
+man-db
+man-pages
+man-pages-zh_cn
