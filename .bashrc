@@ -5,6 +5,11 @@
 # PATH
 export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 
+# if running on WSL, then source cli env config
+if [[ $(grep WSL /proc/version) ]]; then
+    [ -f $HOME/.config/bash/cli-env.rc ] && source $HOME/.config/bash/cli-env.rc
+fi
+
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
