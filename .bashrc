@@ -103,30 +103,30 @@ alias :wq="sync && exit"
 # https://wiki.archlinux.org/index.php/Proxy_server#Environment_variables
 # also check this repo: (https://github.com/comwrg/FUCK-GFW)
 assignProxy(){
-  PROXY_ENV="http_proxy ftp_proxy https_proxy all_proxy HTTP_PROXY HTTPS_PROXY FTP_PROXY ALL_PROXY"
-   for envar in $PROXY_ENV
-   do
-      export $envar=$1
-   done
-   for envar in "no_proxy NO_PROXY"
-   do
-      export $envar=$2
-   done
+    PROXY_ENV="http_proxy ftp_proxy https_proxy all_proxy HTTP_PROXY HTTPS_PROXY FTP_PROXY ALL_PROXY"
+    for envar in $PROXY_ENV
+    do
+        export $envar=$1
+    done
+    for envar in "no_proxy NO_PROXY"
+    do
+        export $envar=$2
+    done
 }
 clrProxy(){
     PROXY_ENV="http_proxy ftp_proxy https_proxy all_proxy HTTP_PROXY HTTPS_PROXY FTP_PROXY ALL_PROXY"
     for envar in $PROXY_ENV
     do
-       unset $envar
+        unset $envar
     done
 }
 myProxy(){
-   # user=YourUserName
-   # read -p "Password: " -s pass &&  echo -e " "
-   # proxy_value="http://$user:$pass@ProxyServerAddress:Port"
-   proxy_value="http://127.0.0.1:7890"
-   no_proxy_value="localhost,127.0.0.1,LocalAddress,LocalDomain.com"
-   assignProxy $proxy_value $no_proxy_value
+    # user=YourUserName
+    # read -p "Password: " -s pass &&  echo -e " "
+    # proxy_value="http://$user:$pass@ProxyServerAddress:Port"
+    proxy_value="http://127.0.0.1:7890"
+    no_proxy_value="localhost,127.0.0.1,LocalAddress,LocalDomain.com"
+    assignProxy $proxy_value $no_proxy_value
 }
 
 # fars.ee is a temporary deployment of pb by farseerfc
@@ -176,15 +176,15 @@ alias Sia="a -Sai"
 alias Sai="a -Sai"
 
 man() {
-	env \
-		LESS_TERMCAP_mb=$(printf "\e[1;37m") \
-		LESS_TERMCAP_md=$(printf "\e[1;37m") \
-		LESS_TERMCAP_me=$(printf "\e[0m") \
-		LESS_TERMCAP_se=$(printf "\e[0m") \
-		LESS_TERMCAP_so=$(printf "\e[1;47;30m") \
-		LESS_TERMCAP_ue=$(printf "\e[0m") \
-		LESS_TERMCAP_us=$(printf "\e[0;36m") \
-			man "$@"
+    env \
+        LESS_TERMCAP_mb=$(printf "\e[1;37m") \
+        LESS_TERMCAP_md=$(printf "\e[1;37m") \
+        LESS_TERMCAP_me=$(printf "\e[0m") \
+        LESS_TERMCAP_se=$(printf "\e[0m") \
+        LESS_TERMCAP_so=$(printf "\e[1;47;30m") \
+        LESS_TERMCAP_ue=$(printf "\e[0m") \
+        LESS_TERMCAP_us=$(printf "\e[0;36m") \
+        man "$@"
 }
 alias cman="env LANG=zh_CN.UTF-8 man"
 
