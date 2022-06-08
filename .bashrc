@@ -170,6 +170,7 @@ alias Sy="sudo pacman -Sy"
 # paru: aur helper
 alias a='paru --noconfirm'
 alias Syua="a -Syu"
+alias Sya='a -Sy'
 alias Ssa="a -Ssa"
 alias Sas="a -Ssa"
 alias Sia="a -Sai"
