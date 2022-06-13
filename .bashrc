@@ -7,19 +7,47 @@ export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 
 # if running on WSL, then source cli env config
 if [[ $(grep WSL /proc/version) ]]; then
-    [ -f $HOME/.config/bash/cli-env.rc ] && source $HOME/.config/bash/cli-env.rc
+    [ -f $HOME/.config/bash/cli-env.sh ] && source $HOME/.config/bash/cli-env.sh
 fi
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-#alias ls='ls --color=auto'
-alias ls='exa'
+program_exist() {
+    for arg in "$@"; do
+        if ! command -v "$arg" >/dev/null 2>&1; then
+            return 1
+        fi
+    done
+    return 0
+}
 
-alias ll='ls -l'
-alias la='ls -la'
-alias lh='ls -lh'
-alias lf='ls -F'
+#alias ls='ls --color=auto'
+if program_exist "exa"; then
+    [ -f $HOME/.config/bash/exa.sh ] && source $HOME/.config/bash/exa.sh
+fi
+
+# git
+if program_exist "git"; then
+    [ -f $HOME/.config/bash/git.sh ] && source $HOME/.config/bash/git.sh
+fi
+
+# ranger : A VIM-inspired filemanager for the console
+# https://github.com/ranger/ranger/wiki
+if program_exist "ranger"; then
+    [ -f $HOME/.config/bash/ranger.sh ] && source $HOME/.config/bash/ranger.sh
+fi
+
+# fzf : A command-line fuzzy finder
+# https://github.com/junegunn/fzf
+if program_exist "fzf" "fd" "bat"; then
+    [ -f $HOME/.config/bash/fzf.sh ] && source $HOME/.config/bash/fzf.sh
+fi
+
+# Set CLI proxy server
+# https://wiki.archlinux.org/index.php/Proxy_server#Environment_variables
+# also check this repo: (https://github.com/comwrg/FUCK-GFW)
+[ -f $HOME/.config/bash/cli-proxy.sh ] && source $HOME/.config/bash/cli-proxy.sh
 
 alias grep='grep --color'
 alias tree='tree -C'
@@ -30,46 +58,6 @@ alias x="xdg-open"
 # less : hightlight (-R) and line number (-N)
 export LESSOPEN="| /usr/bin/src-hilite-lesspipe.sh %s"
 export LESS="-R"
-
-# Git alias
-alias glog="git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
-# gitmydot
-# https://wiki.archlinux.org/title/Dotfiles#Tracking_dotfiles_directly_with_Git
-alias gitdot='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
-[ -f /usr/share/bash-completion/completions/git ] && source /usr/share/bash-completion/completions/git
-__git_complete gitdot __git_main
-
-# ranger : A VIM-inspired filemanager for the console
-# https://github.com/ranger/ranger/wiki
-function _ranger_auto_cd {
-    local IFS=$'\t\n'
-    local tempfile="$(mktemp -t tmp.XXXXXX)"
-    local ranger_cmd=(
-        command
-        ranger
-        --cmd="map Q chain shell echo %d > "$tempfile"; quitall"
-    )
-    
-    ${ranger_cmd[@]} "$@"
-    if [[ -f "$tempfile" ]] && [[ "$(cat -- "$tempfile")" != "$(echo -n `pwd`)" ]]; then
-        cd -- "$(cat "$tempfile")" || return
-    fi
-    command rm -f -- "$tempfile" 2>/dev/null
-}
-alias ra='_ranger_auto_cd'
-alias sra="sudo -E ranger"
-
-# fzf : A command-line fuzzy finder
-# https://github.com/junegunn/fzf
-export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow'
-export FZF_DEFAULT_OPTS='--height 60% --layout=reverse --border'
-export FZF_COMPLETION_TRIGGER='\'
-export fzf_preview_cmd='[[ $(file --mime {}) =~ binary ]] && echo {} is a binary file || (bat --color=always --line-range 0:200 {}) 2> /dev/null'
-export FZF_CTRL_T_COMMAND="${FZF_DEFAULT_COMMAND}" # ^T preview the content of the file
-export FZF_CTRL_T_OPTS="--preview '${fzf_preview_cmd}'"
-export FZF_ALT_C_COMMAND='fd --type d --hidden --follow' # Alt+C cd into the selected directory
-[ -f /usr/share/fzf/key-bindings.bash ] && source /usr/share/fzf/key-bindings.bash
-[ -f /usr/share/fzf/completion.bash ] && source /usr/share/fzf/completion.bash
 
 # Basic systemctl usage
 alias start="sudo systemctl start"
@@ -86,7 +74,7 @@ alias .="source"
 alias neo="neofetch"
 alias cp="cp -i --reflink=auto"
 alias ssh="TERM=xterm-256color ssh"
-alias bc="bc -lq" # calculator
+alias bc="bc -lq"                                 # calculator
 alias pvb="pv -W -F'All:%b In:%t Cu:%r Av:%a %p'" # monitor the progress of data through a pipe
 alias kwin-blur="xprop -f _KDE_NET_WM_BLUR_BEHIND_REGION 32c -set _KDE_NET_WM_BLUR_BEHIND_REGION 0"
 alias kwin-clear="xprop -f _KDE_NET_WM_BLUR_BEHIND_REGION 32c -remove _KDE_NET_WM_BLUR_BEHIND_REGION"
@@ -98,36 +86,6 @@ alias :q="exit"
 alias :w="sync"
 alias :x="sync && exit"
 alias :wq="sync && exit"
-
-# Set CLI proxy server
-# https://wiki.archlinux.org/index.php/Proxy_server#Environment_variables
-# also check this repo: (https://github.com/comwrg/FUCK-GFW)
-assignProxy(){
-    PROXY_ENV="http_proxy ftp_proxy https_proxy all_proxy HTTP_PROXY HTTPS_PROXY FTP_PROXY ALL_PROXY"
-    for envar in $PROXY_ENV
-    do
-        export $envar=$1
-    done
-    for envar in "no_proxy NO_PROXY"
-    do
-        export $envar=$2
-    done
-}
-clrProxy(){
-    PROXY_ENV="http_proxy ftp_proxy https_proxy all_proxy HTTP_PROXY HTTPS_PROXY FTP_PROXY ALL_PROXY"
-    for envar in $PROXY_ENV
-    do
-        unset $envar
-    done
-}
-myProxy(){
-    # user=YourUserName
-    # read -p "Password: " -s pass &&  echo -e " "
-    # proxy_value="http://$user:$pass@ProxyServerAddress:Port"
-    proxy_value="http://127.0.0.1:7890"
-    no_proxy_value="localhost,127.0.0.1,LocalAddress,LocalDomain.com"
-    assignProxy $proxy_value $no_proxy_value
-}
 
 # fars.ee is a temporary deployment of pb by farseerfc
 alias pb="curl -F 'c=@-' 'https://fars.ee/'"
