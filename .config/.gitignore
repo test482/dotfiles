@@ -1,5 +1,6 @@
 !/autostart/
 !/bash/
+!/fontconfig/
 !/git/
 !/mpv/
 !/neofetch/
@@ -7,6 +8,5 @@
 !/python/
 !/systemd/
 !/tmux/
-!/fontconfig/
 !user-dirs.dirs
 !user-dirs.locale

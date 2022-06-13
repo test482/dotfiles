@@ -2,9 +2,9 @@
 *
 
 # ignore-list files, at top level and under any tracked directories
+!.bashrc
 !.gitignore
 !.gitkeep
-!.bashrc
 !.vimrc
 !README.md
 
