@@ -1,3 +1,4 @@
+!/autostart/
 !/bash/
 !/git/
 !/mpv/
@@ -7,3 +8,5 @@
 !/systemd/
 !/tmux/
 !/fontconfig/
+!user-dirs.dirs
+!user-dirs.locale
