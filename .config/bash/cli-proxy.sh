@@ -16,11 +16,13 @@ clrProxy(){
         unset $envar
     done
 }
+
+# usage: myProxy 127.0.0.1:1080
 myProxy(){
     # user=YourUserName
     # read -p "Password: " -s pass &&  echo -e " "
     # proxy_value="http://$user:$pass@ProxyServerAddress:Port"
-    proxy_value="http://127.0.0.1:1080"
+    proxy_value="http://$1"
     no_proxy_value="localhost,127.0.0.1,LocalAddress,LocalDomain.com"
     assignProxy $proxy_value $no_proxy_value
 }
