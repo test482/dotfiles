@@ -1,16 +1,16 @@
 #! /usr/bin/env bash
 
 # if xdg dir not exist, create it
-if [! -d $XDG_CACHE_HOME]; then
+if [ ! -d $XDG_CACHE_HOME ]; then
     mkdir -p $XDG_CACHE_HOME
 fi
-if [! -d $XDG_CONFIG_HOME]; then
+if [ ! -d $XDG_CONFIG_HOME ]; then
     mkdir -p $XDG_CONFIG_HOME
 fi
-if [! -d $XDG_DATA_HOME]; then
+if [ ! -d $XDG_DATA_HOME ]; then
     mkdir -p $XDG_DATA_HOME
 fi
-if [! -d $XDG_STATE_HOME]; then
+if [ ! -d $XDG_STATE_HOME ]; then
     mkdir -p $XDG_STATE_HOME
 fi
 
