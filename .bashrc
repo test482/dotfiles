@@ -7,7 +7,7 @@ export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 
 # if running on WSL, then source cli env config
 if [[ $(grep WSL /proc/version) ]]; then
-    [ -f $HOME/.config/bash/cli-env.sh ] && source $HOME/.config/bash/cli-env.sh
+    [ -f "$HOME"/.config/bash/cli-env.sh ] && source "$HOME"/.config/bash/cli-env.sh
 fi
 
 # If not running interactively, don't do anything
@@ -24,30 +24,33 @@ program_exist() {
 
 #alias ls='ls --color=auto'
 if program_exist "exa"; then
-    [ -f $HOME/.config/bash/exa.sh ] && source $HOME/.config/bash/exa.sh
+    [ -f "$HOME"/.config/bash/exa.sh ] && source "$HOME"/.config/bash/exa.sh
 fi
 
 # git
 if program_exist "git"; then
-    [ -f $HOME/.config/bash/git.sh ] && source $HOME/.config/bash/git.sh
+    [ -f "$HOME"/.config/bash/git.sh ] && source "$HOME"/.config/bash/git.sh
 fi
 
 # ranger : A VIM-inspired filemanager for the console
 # https://github.com/ranger/ranger/wiki
 if program_exist "ranger"; then
-    [ -f $HOME/.config/bash/ranger.sh ] && source $HOME/.config/bash/ranger.sh
+    [ -f "$HOME"/.config/bash/ranger.sh ] && source "$HOME"/.config/bash/ranger.sh
 fi
 
 # fzf : A command-line fuzzy finder
 # https://github.com/junegunn/fzf
 if program_exist "fzf" "fd" "bat"; then
-    [ -f $HOME/.config/bash/fzf.sh ] && source $HOME/.config/bash/fzf.sh
+    [ -f "$HOME"/.config/bash/fzf.sh ] && source "$HOME"/.config/bash/fzf.sh
 fi
+
+# yarn : A package manager for Node.js
+[ -f "$XDG_CONFIG_HOME/yarn/config" ] && alias yarn='yarn --use-yarnrc "$XDG_CONFIG_HOME/yarn/config"'
 
 # Set CLI proxy server
 # https://wiki.archlinux.org/index.php/Proxy_server#Environment_variables
 # also check this repo: (https://github.com/comwrg/FUCK-GFW)
-[ -f $HOME/.config/bash/cli-proxy.sh ] && source $HOME/.config/bash/cli-proxy.sh
+[ -f "$HOME"/.config/bash/cli-proxy.sh ] && source "$HOME"/.config/bash/cli-proxy.sh
 
 alias grep='grep --color'
 alias tree='tree -C'
