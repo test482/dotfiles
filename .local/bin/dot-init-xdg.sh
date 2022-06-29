@@ -15,7 +15,7 @@ if [ ! -d $XDG_STATE_HOME ]; then
 fi
 
 # bash
-if [! -d "$XDG_STATE_HOME"/bash]; then
+if [ ! -d "$XDG_STATE_HOME"/bash ]; then
     mkdir -p "$XDG_STATE_HOME"/bash
 fi
 
