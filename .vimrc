@@ -33,6 +33,7 @@ set number " 显示行号
 
 set wrap " 自动折行
 set linebreak " 只有遇到指定的符号，才发生折行
+set formatoptions+=m " 如遇Unicode值大于255的文本，不必等到空格再折行
 set scrolloff=10 " 垂直滚动时，光标距离顶部/底部的位置（单位：行）
 
 set ignorecase " 搜索时忽略大小写
@@ -40,9 +41,12 @@ set smartcase " 对于只有一个大写字母的搜索词，将大小写敏感
 set nowrapscan " 搜索到文件始末位置时会停止
 
 set nobackup " 不创建备份文件
+set noswapfile " 关闭交换文件
 set autochdir " 自动切换工作目录
 set autoread " 自动重新读取
-set noerrorbells " 有错误信息时不响铃
+" 去掉输入错误的提示声音
+set novisualbell
+set noerrorbells
 
 set showmatch " 显示括号配对情况
 
@@ -83,4 +87,7 @@ autocmd FileType python set autoindent tabstop=4 shiftwidth=4 expandtab softtabs
 
 " paste mode toggler
 set pastetoggle=<F3>
+
+" line number toggler
+nnoremap <F4> :set number!<CR>
 
