@@ -75,3 +75,12 @@ autocmd FileType python set autoindent tabstop=4 shiftwidth=4 expandtab softtabs
 
 " let :Q do :q!
 :command Q :q!
+
+" make more :wq work
+:command W :w
+:command Wq :wq
+:command WQ :wq
+
+" paste mode toggler
+set pastetoggle=<F3>
+
