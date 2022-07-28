@@ -1,4 +1,3 @@
-adobe-source-code-pro-fonts
 alacritty
 android-tools
 apache
@@ -47,7 +46,6 @@ mariadb
 maven
 mlocate
 neofetch
-nerd-fonts-source-code-pro
 nginx
 nmap
 noto-fonts
@@ -83,9 +81,8 @@ ttf-joypixels
 unarchiver
 unrar
 vim
-websocketd
+websocat
 wget
 which
 xorg-xauth
-yay
 zip
