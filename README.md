@@ -23,6 +23,8 @@ mkdir -p ~/.config-backup && gitdot checkout 2>&1 | egrep "\s+\." | awk {'print 
 gitdot checktout
 
 gitdot config --local status.showUntrackedFiles no
+
+gitdot submodule init
 ```
 
 init some config first

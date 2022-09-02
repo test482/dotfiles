@@ -77,7 +77,6 @@ texinfo
 tmux
 trash-cli
 tree
-ttf-joypixels
 unarchiver
 unrar
 vim
