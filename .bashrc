@@ -5,11 +5,6 @@
 # PATH
 export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 
-# if running on WSL, then source cli env config
-if [[ $(grep WSL /proc/version) ]]; then
-    [ -f "$HOME"/.config/bash/cli-env.sh ] && source "$HOME"/.config/bash/cli-env.sh
-fi
-
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
@@ -81,6 +76,7 @@ alias bc="bc -lq"                                 # calculator
 alias pvb="pv -W -F'All:%b In:%t Cu:%r Av:%a %p'" # monitor the progress of data through a pipe
 alias kwin-blur="xprop -f _KDE_NET_WM_BLUR_BEHIND_REGION 32c -set _KDE_NET_WM_BLUR_BEHIND_REGION 0"
 alias kwin-clear="xprop -f _KDE_NET_WM_BLUR_BEHIND_REGION 32c -remove _KDE_NET_WM_BLUR_BEHIND_REGION"
+alias scrcpy='scrcpy --disable-screensaver --hid-keyboard --stay-awake --turn-screen-off --power-off-on-close'
 alias gtar="tar -Ipigz czfv"
 alias btar="tar -Ilbzip2 cjfv"
 alias 7tar="7z a -mmt"
