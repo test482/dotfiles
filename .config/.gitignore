@@ -10,5 +10,6 @@
 !/python/
 !/systemd/
 !/tmux/
+!chromium-flags.conf
 !user-dirs.dirs
 !user-dirs.locale
