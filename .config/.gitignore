@@ -9,6 +9,7 @@
 !/npm/
 !/pacman/
 !/python/
+!/ranger/
 !/systemd/
 !/tmux/
 !chromium-flags.conf
