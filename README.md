@@ -23,15 +23,15 @@ gitdot checktout
 
 gitdot config --local status.showUntrackedFiles no
 
-gitdot submodule init
+gitdot submodule update --init
 ```
 
 init some config first:
 
 ```bash
 # pacman
-sudo ln -sf $HOME/.config/pacman/pacman.conf /etc/pacman.conf
-sudo ln -sf $HOME/.config/pacman/pacman.d/mirrorlist /etc/pacman.d/mirrorlist
+sudo cp $HOME/.config/pacman/pacman.conf /etc/pacman.conf
+sudo cp $HOME/.config/pacman/pacman.d/mirrorlist /etc/pacman.d/mirrorlist
 sudo cp $HOME/.config/pacman/hooks/* /etc/pacman.d/hooks/
 sudo pacman -Sy archlinux-keyring
 sudo pacman -Sy archlinuxcn-keyring
@@ -42,3 +42,9 @@ sudo pacman -Sy $(< $HOME/.config/pacman/pkg-list/cli.txt) # or other pkgs
 use systemd to boot Plasma:
 
 `kwriteconfig5 --file startkderc --group General --key systemdBoot true`
+
+links:
+
+[Plasma and the systemd boot](https://invent.kde.org/plasma/plasma-workspace/-/wikis/Plasma-and-the-systemd-boot)
+
+[初等記憶體 - Linux 用户环境变量设置](https://axionl.me/p/linux-%E7%94%A8%E6%88%B7%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E8%AE%BE%E7%BD%AE/)
