@@ -4,6 +4,7 @@
 
 # PATH
 export PATH=$HOME/.local/bin:$PATH
+export HISTFILE="$XDG_STATE_HOME"/bash/history
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
@@ -105,6 +106,7 @@ alias Copng="Co -target image/png"
 # Pacman aliases and functions
 alias Syu="sudo pacman -Syu"
 alias Rcs="sudo pacman -Rcs"
+alias Rs="sudo pacman -Rs"
 alias Ss="pacman -Ss"
 alias Si="pacman -Si"
 alias Sl="pacman -Sl"
