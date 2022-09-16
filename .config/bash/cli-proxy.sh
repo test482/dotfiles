@@ -32,10 +32,10 @@ myProxy(){
         proxy_array=$1
     else
         echo "Usage: myProxy [ProxyServerAddress:Port]"
-        exit 1
     fi
 
     proxy_value="http://$proxy_array"
     no_proxy_value="localhost,127.0.0.1,LocalAddress,LocalDomain.com"
     assignProxy "$proxy_value" "$no_proxy_value"
+    echo "proxy server $proxy_array activated"
 }
