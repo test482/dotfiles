@@ -29,3 +29,6 @@ alias gr=jump-to-git-root
 alias gitdot='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 [ -f /usr/share/bash-completion/completions/git ] && source /usr/share/bash-completion/completions/git
 __git_complete gitdot __git_main
+
+# lazymydot
+alias lazydot='/usr/bin/lazygit --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
