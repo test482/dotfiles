@@ -32,6 +32,7 @@ myProxy(){
         proxy_array=$1
     else
         echo "Usage: myProxy [ProxyServerAddress:Port]"
+        return 1
     fi
 
     proxy_value="http://$proxy_array"
