@@ -26,7 +26,7 @@ gitdot config --local status.showUntrackedFiles no
 gitdot submodule update --init
 ```
 
-init some config first:
+### init some config first
 
 ```bash
 # pacman
@@ -39,12 +39,8 @@ sudo pacman -Sy archlinuxcn-keyring
 sudo pacman -Sy $(< $HOME/.config/pacman/pkg-list/cli.txt) # or other pkgs
 ```
 
-use systemd to boot Plasma:
+### [use systemd to boot Plasma](https://invent.kde.org/plasma/plasma-workspace/-/wikis/Plasma-and-the-systemd-boot)
 
 `kwriteconfig5 --file startkderc --group General --key systemdBoot true`
 
-links:
-
-[Plasma and the systemd boot](https://invent.kde.org/plasma/plasma-workspace/-/wikis/Plasma-and-the-systemd-boot)
-
-[初等記憶體 - Linux 用户环境变量设置](https://axionl.me/p/linux-%E7%94%A8%E6%88%B7%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E8%AE%BE%E7%BD%AE/)
+> as [KDE - ArchWiki](https://wiki.archlinux.org/title/KDE#systemd_startup) say, `This is the default startup method since Plasma 5.25`, so don't need do this on KDE Plasma 5.25+ .
