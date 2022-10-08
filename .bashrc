@@ -43,6 +43,9 @@ fi
 # yarn : A package manager for Node.js
 [ -f "$XDG_CONFIG_HOME/yarn/config" ] && alias yarn='yarn --use-yarnrc "$XDG_CONFIG_HOME/yarn/config"'
 
+# nvm : node version manager
+[ -f /usr/share/nvm/init-nvm.sh ] && source /usr/share/nvm/init-nvm.sh
+
 # Set CLI proxy server
 # https://wiki.archlinux.org/index.php/Proxy_server#Environment_variables
 # also check this repo: (https://github.com/comwrg/FUCK-GFW)

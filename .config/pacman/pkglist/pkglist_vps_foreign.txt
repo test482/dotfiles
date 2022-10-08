@@ -1,4 +1,3 @@
 endlessh-git
 headscale
-hexo-cli
 tmux-bash-completion-git

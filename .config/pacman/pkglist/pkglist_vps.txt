@@ -1,6 +1,5 @@
 alacritty
 android-tools
-apache
 arch-install-scripts
 archlinuxcn-keyring
 autoconf
@@ -50,6 +49,7 @@ nginx
 nmap
 noto-fonts
 noto-fonts-cjk
+nvm
 openjdk11-doc
 openssh
 pacman-contrib
@@ -73,6 +73,7 @@ source-highlight
 sqlite-analyzer
 sqlite-doc
 sudo
+tealdeer
 texinfo
 tmux
 trash-cli
