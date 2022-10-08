@@ -26,6 +26,7 @@ gitdot config --local status.showUntrackedFiles no
 gitdot submodule update --init
 
 # ignore some files change
+# gitdot ls-files -v | rg "^S" for check skiped file list
 gitdot update-index --skip-worktree $HOME/.ssh/authorized_keys
 ```
 
