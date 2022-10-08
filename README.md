@@ -4,7 +4,7 @@ my arch dotfiles
 
 |Shell (Shell framework)|WM / DE|Editor|Terminal|Multiplexer|Monitor|File Manager|
 |----|----|----|----|----|----|----|
-|bash|KDE|vim / vscode|kconsole / alacritty|tmux|htop|ranger|
+|bash|KDE|vim / vscode|konsole / alacritty|tmux|htop|ranger|
 
 ## Usage
 
@@ -24,6 +24,9 @@ gitdot checktout
 gitdot config --local status.showUntrackedFiles no
 
 gitdot submodule update --init
+
+# ignore some files change
+gitdot update-index --skip-worktree $HOME/.ssh/authorized_keys
 ```
 
 ### init some config first
