@@ -11,6 +11,7 @@ bc
 bind
 bison
 btop
+cargo-zigbuild
 docker
 docker-compose
 duf
@@ -80,6 +81,7 @@ trash-cli
 tree
 unarchiver
 unrar
+uutils-coreutils
 vim
 websocat
 wget
