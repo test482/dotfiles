@@ -4,12 +4,14 @@
 !/fd/
 !/fontconfig/
 !/git/
+!/go/
 !/mpv/
 !/neofetch/
 !/npm/
 !/pacman/
 !/python/
 !/ranger/
+!/ripgrep/
 !/systemd/
 !/tmux/
 !chromium-flags.conf
