@@ -14,6 +14,7 @@
 !/ripgrep/
 !/systemd/
 !/tmux/
+!/yarn/
 !chromium-flags.conf
 !user-dirs.dirs
 !user-dirs.locale
