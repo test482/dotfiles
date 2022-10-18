@@ -3,7 +3,10 @@
 #
 
 # PATH
-export PATH=$HOME/.local/bin:$PATH
+if [[ ! "${PATH}" =~ "${USER}" ]]; then
+    export $(/usr/lib/systemd/user-environment-generators/30-systemd-environment-d-generator)
+fi
+
 export HISTFILE="$XDG_STATE_HOME"/bash/history
 
 # If not running interactively, don't do anything
