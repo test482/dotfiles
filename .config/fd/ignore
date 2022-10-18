@@ -5,18 +5,15 @@
 #    --no-ignore        : don't respect .ignore, .gitignore, .fdignore
 #    --no-ignore-vcs    : don't respect .ignore files
 
-# Custom ignore
+####Custom ignore####
 *.bak
 *.log
 *.sha1
-*rustup/
 .cache/
-.cargo/
 .dotfiles/
 .git/
 .vscode-server/
 .wine/
-go/
 
 # Python byte-compiled/optimized/DLL files
 __pycache__/
