@@ -54,6 +54,9 @@ fi
 # also check this repo: (https://github.com/comwrg/FUCK-GFW)
 [ -f "$HOME"/.config/bash/cli-proxy.sh ] && source "$HOME"/.config/bash/cli-proxy.sh
 
+# bash_completion
+[ -r /usr/share/bash-completion/bash_completion ] && source /usr/share/bash-completion/bash_completion
+
 alias grep='grep --color'
 alias tree='tree -C'
 
