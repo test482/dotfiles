@@ -12,8 +12,15 @@
 .cache/
 .dotfiles/
 .git/
+.mozilla/
+.pki/
+.steam/
+.steampath/
+.vmware/
 .vscode-server/
+.vscode/
 .wine/
+wallpaper/
 
 # Python byte-compiled/optimized/DLL files
 __pycache__/
