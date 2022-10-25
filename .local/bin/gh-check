@@ -135,7 +135,7 @@ async def update_hosts():
     subprocess.check_call(cmd)
 
 async def resolve(domain):
-  loop = asyncio.get_event_loop()
+  loop = asyncio.get_current_loop()
   addrinfo = await loop.getaddrinfo(
     domain, None,
     family=socket.AF_INET,
@@ -146,36 +146,24 @@ async def resolve(domain):
 
 async def get_items(proto):
   items = [
-    ('13.234.210.38',  'Bombay'),
-    ('13.234.176.102', 'Bombay'),
-    ('52.192.72.89',   'Tokyo'),
-    ('13.114.40.48',   'Tokyo'),
-    ('52.69.186.44',   'Tokyo'),
-    ('15.164.81.167',  'Seoul'),
-    ('52.78.231.108',  'Seoul'),
-    ('13.229.188.59',  'Singapore'),
-    ('13.250.177.223', 'Singapore'),
-    ('52.74.223.119',  'Singapore'),
-    ('192.30.255.112', 'Seattle'),
-    ('192.30.255.113', 'Seattle'),
-    ('140.82.112.3',   'Seattle'),
-    ('140.82.112.4',   'Seattle'),
-    ('192.30.253.112', 'Ashburn'),
-    ('192.30.253.113', 'Ashburn'),
-    ('140.82.113.3',   'Ashburn'),
-    ('140.82.113.4',   'Ashburn'),
-    ('140.82.114.3',   'Ashburn'),
-    ('140.82.114.4',   'Ashburn'),
-    ('140.82.118.3',   'Armsterdam'),
-    ('140.82.118.4',   'Armsterdam'),
-    ('140.82.121.3',   'Frankfurt'),
-    ('140.82.121.4',   'Frankfurt'),
-    ('13.237.44.5',    'Sydney'),
-    ('52.64.108.95',   'Sydney'),
-    ('13.236.229.21',  'Sydney'),
-    ('18.231.5.6',     'Sao Paulo'),
-    ('18.228.52.138',  'Sao Paulo'),
-    ('18.228.67.229',  'Sao Paulo'),
+    ('20.27.177.113',   'Tokyo'),
+    ('20.200.245.247',  'Seoul'),
+    ('20.205.243.166',  'Singapore'),
+    ('20.207.73.82',    'Pune'),
+    ('192.30.255.112',  'Seattle'),
+    ('192.30.255.113',  'Seattle'),
+    ('140.82.112.3',    'Seattle'),
+    ('140.82.112.4',    'Seattle'),
+    ('140.82.113.3',    'Ashburn'),
+    ('140.82.113.4',    'Ashburn'),
+    ('140.82.114.3',    'Ashburn'),
+    ('140.82.114.4',    'Ashburn'),
+    ('140.82.121.3',    'Frankfurt'),
+    ('140.82.121.4',    'Frankfurt'),
+    ('20.233.54.53',    'Dubai'),
+    ('20.248.137.48',   'Sydney'),
+    ('102.133.202.242', 'Johannesburg'),
+    ('20.201.28.151',   'Sao Paulo'),
   ]
 
   return [(x[1], x[0], y) for x in items for y in proto]
@@ -199,8 +187,8 @@ if __name__ == '__main__':
   else:
     main_fu = main(args.proto)
 
-  loop = asyncio.get_event_loop()
   try:
-    loop.run_until_complete(main_fu)
+    asyncio.run(main_fu)
   except KeyboardInterrupt:
     pass
+
