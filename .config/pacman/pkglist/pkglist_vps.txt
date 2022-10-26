@@ -1,4 +1,3 @@
-alacritty
 android-tools
 arch-install-scripts
 archlinuxcn-keyring
@@ -12,8 +11,10 @@ bind
 bison
 btop
 cargo-zigbuild
+cmake
 docker
 docker-compose
+downgrade
 duf
 exa
 fail2ban
@@ -25,6 +26,7 @@ gcc
 gdb
 git
 gitea
+glow
 groff
 grub
 htop
@@ -45,11 +47,10 @@ man-pages-zh_cn
 mariadb
 maven
 mlocate
+nali-go
 neofetch
 nginx
 nmap
-noto-fonts
-noto-fonts-cjk
 nvm
 openjdk11-doc
 openssh
