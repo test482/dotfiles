@@ -26,7 +26,6 @@ fzf
 gcc
 gdb
 git
-gitea
 glow
 groff
 grub

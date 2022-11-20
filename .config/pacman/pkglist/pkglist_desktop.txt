@@ -13,6 +13,7 @@ archlinuxcn-keyring
 aria2-fast
 ark
 aspell
+auto-cpufreq
 autoconf
 automake
 base
@@ -31,6 +32,8 @@ cargo-zigbuild
 chromium
 clash
 clash-for-windows-bin
+clash-meta
+clash-verge
 cmake
 cowsay
 cpupower
@@ -194,7 +197,7 @@ milou
 mlocate
 mpv
 neofetch
-nerd-fonts-hack
+neovim
 netctl
 network-manager-applet
 networkmanager
@@ -219,6 +222,7 @@ oxygen
 p7zip
 pacman
 pacman-contrib
+pacman-static
 pacvis-git
 pandoc-bin
 papirus-icon-theme
@@ -240,7 +244,6 @@ plasma-workspace-wallpapers
 plasma5-applets-active-window-control
 plasma5-applets-netspeed
 polkit-kde-agent
-power-profiles-daemon
 powerdevil
 powerline
 powerline-fonts
@@ -257,6 +260,7 @@ python-matplotlib
 python-pipenv
 python-protobuf
 python-psutil
+python-pynvim
 qbittorrent-enhanced-git
 qemu-base
 qt5-base-24h
@@ -306,6 +310,7 @@ texlive-langchinese
 timeshift
 tmux
 tree
+ttf-hack-nerd
 ttf-jetbrains-mono
 ttf-joypixels
 ttf-sourcecodepro-nerd

@@ -15,11 +15,11 @@ alias gitdot='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
 git clone --bare https://github.com/test482/dotfiles.git ~/.dotfiles
 
-gitdot checktout
+gitdot checkout
 
 # backup configuration files that might already exist if needed
 # mkdir -p ~/.config-backup && gitdot checkout 2>&1 | egrep "\s+\." | awk {'print $1'} | xargs -I{} mv {} ~/.config-backup/{}
-# gitdot checktout
+# gitdot checkout
 
 gitdot config --local status.showUntrackedFiles no
 
@@ -40,7 +40,7 @@ sudo cp $HOME/.config/pacman/hooks/* /etc/pacman.d/hooks/
 sudo pacman -Sy archlinux-keyring
 sudo pacman -Sy archlinuxcn-keyring
 # install pkgs
-sudo pacman -Sy $(< $HOME/.config/pacman/pkg-list/cli.txt) # or other pkgs
+sudo pacman -Sy $(< $HOME/.config/pacman/pkglist/pkglist_vps.txt) # or other pkgs
 ```
 
 ### [use systemd to boot Plasma](https://invent.kde.org/plasma/plasma-workspace/-/wikis/Plasma-and-the-systemd-boot)

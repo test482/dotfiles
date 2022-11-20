@@ -5,4 +5,5 @@ rusty-hook
 sddm-theme-sugar-candy-git
 tmux-bash-completion-git
 ttf-wps-fonts
+vhs
 xdg-ninja-git
