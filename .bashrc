@@ -60,6 +60,9 @@ fi
 # bash_completion
 [ -r /usr/share/bash-completion/bash_completion ] && source /usr/share/bash-completion/bash_completion
 
+# custom conf
+[ -f "$HOME"/.config/bash/custom.sh ] && source "$HOME"/.config/bash/custom.sh
+
 alias grep='grep --color'
 alias tree='tree -C'
 
