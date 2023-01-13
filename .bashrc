@@ -49,6 +49,9 @@ fi
 # nvm : node version manager
 [ -f /usr/share/nvm/init-nvm.sh ] && source /usr/share/nvm/init-nvm.sh
 
+# source conda alias
+[ -f /opt/miniconda/etc/profile.d/conda.sh ] && alias sourceconda='source /opt/miniconda/etc/profile.d/conda.sh'
+
 # Set CLI proxy server
 # https://wiki.archlinux.org/index.php/Proxy_server#Environment_variables
 # also check this repo: (https://github.com/comwrg/FUCK-GFW)
