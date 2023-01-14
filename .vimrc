@@ -1,18 +1,40 @@
 set nocompatible  " 关闭vi兼容模式
 
 " XDG_Base_Directory support
-set undodir=$XDG_DATA_HOME/vim/undo/
-set directory=$XDG_DATA_HOME/vim/swap/
-set backupdir=$XDG_DATA_HOME/vim/backup/
-set viewdir=$XDG_DATA_HOME/vim/view/
-set viminfo+='1000,n$XDG_DATA_HOME/vim/viminfo
-set runtimepath=$XDG_CONFIG_HOME/vim/,$VIMRUNTIME,$XDG_CONFIG_HOME/vim/after/
+if empty($MYVIMRC) | let $MYVIMRC = expand('<sfile>:p') | endif
+
+if empty($XDG_CACHE_HOME)  | let $XDG_CACHE_HOME  = $HOME."/.cache"       | endif
+if empty($XDG_CONFIG_HOME) | let $XDG_CONFIG_HOME = $HOME."/.config"      | endif
+if empty($XDG_DATA_HOME)   | let $XDG_DATA_HOME   = $HOME."/.local/share" | endif
+if empty($XDG_STATE_HOME)  | let $XDG_STATE_HOME  = $HOME."/.local/state" | endif
+
+set runtimepath^=$XDG_CONFIG_HOME/vim
+set runtimepath+=$XDG_DATA_HOME/vim
+set runtimepath+=$XDG_CONFIG_HOME/vim/after
+
+set packpath^=$XDG_DATA_HOME/vim,$XDG_CONFIG_HOME/vim
+set packpath+=$XDG_CONFIG_HOME/vim/after,$XDG_DATA_HOME/vim/after
+
+let g:netrw_home = $XDG_DATA_HOME."/vim"
+call mkdir($XDG_DATA_HOME."/vim/spell", 'p')
+
+set backupdir=$XDG_STATE_HOME/vim/backup | call mkdir(&backupdir, 'p')
+set directory=$XDG_STATE_HOME/vim/swap   | call mkdir(&directory, 'p')
+set undodir=$XDG_STATE_HOME/vim/undo     | call mkdir(&undodir,   'p')
+set viewdir=$XDG_STATE_HOME/vim/view     | call mkdir(&viewdir,   'p')
+
+if !has('nvim') | set viminfofile=$XDG_STATE_HOME/vim/viminfo | endif
 
 " powerline
 " https://wiki.archlinux.org/index.php/Powerline#Vim
 let g:powerline_pycmd="py3"
 set rtp+=/usr/share/powerline/bindings/vim
 :set laststatus=2
+
+" jump to the last position when reopening a file
+if has("autocmd")
+  au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+endif
 
 syntax on  " 语法高亮
 set showmode " 在底部显示当前处于命令模式还是插入模式
@@ -29,7 +51,9 @@ set softtabstop=4 " Tab转为多少个空格
 
 set number " 显示行号
 "set relativenumber " 显示光标所在行的行号，其他行都为相对于该行的相对行号
-"set cursorline " 高亮光标所在的当前行
+"高亮光标所在行的行号
+set cursorline
+set cursorlineopt=number
 
 set wrap " 自动折行
 set linebreak " 只有遇到指定的符号，才发生折行
@@ -40,8 +64,8 @@ set ignorecase " 搜索时忽略大小写
 set smartcase " 对于只有一个大写字母的搜索词，将大小写敏感
 set nowrapscan " 搜索到文件始末位置时会停止
 
-set nobackup " 不创建备份文件
-set noswapfile " 关闭交换文件
+"set nobackup " 不创建备份文件
+"set noswapfile " 关闭交换文件
 set autochdir " 自动切换工作目录
 set autoread " 自动重新读取
 " 去掉输入错误的提示声音
