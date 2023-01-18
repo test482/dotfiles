@@ -6,7 +6,6 @@
 !.gitignore
 !.gitkeep
 !.gitmodules
-!.vimrc
 !README.md
 
 # top level dirs
