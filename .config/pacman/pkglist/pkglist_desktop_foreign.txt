@@ -1,9 +1,14 @@
 antidot-git
 breeze-blurred-git
+clash-meta-cap-git
 java-lombok
+lib32-obs-vkcapture-git
+obs-gstreamer
+obs-studio-tytan652
+obs-vkcapture-git
 rusty-hook
 sddm-theme-sugar-candy-git
+systemd-cleanup-pacman-hook
 tmux-bash-completion-git
 ttf-wps-fonts
-vhs
 xdg-ninja-git
