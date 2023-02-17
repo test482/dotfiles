@@ -1,5 +1,10 @@
-[source.crates-io]
-replace-with = 'ustc'
+[alias]
+b = "build"
+br = "build --release"
+r = "run"
+rr = "run --release"
+c = "check"
+t = "test"
 
-[source.ustc]
-registry = "https://mirrors.ustc.edu.cn/crates.io-index"
+[term]
+color = 'auto'
