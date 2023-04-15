@@ -1,5 +1,0 @@
-antidot-git
-endlessh-git
-headscale
-tmux-bash-completion-git
-xdg-ninja-git
