@@ -6,9 +6,11 @@ lib32-obs-vkcapture-git
 obs-gstreamer
 obs-studio-tytan652
 obs-vkcapture-git
+play-with-mpv-git
 rusty-hook
-sddm-theme-sugar-candy-git
+sddm-sugar-candy-git
+sddm-theme-corners-git
 systemd-cleanup-pacman-hook
 tmux-bash-completion-git
-ttf-wps-fonts
+uudeck
 xdg-ninja-git

@@ -16,6 +16,7 @@ aspell
 auto-cpufreq
 autoconf
 automake
+autopep8
 base
 bat
 bc
@@ -140,6 +141,7 @@ khelpcenter
 khotkeys
 kimagemapeditor
 kinfocenter
+kleopatra
 kmenuedit
 kolourpaint
 konsole
@@ -181,6 +183,7 @@ linux-lts
 linux-lts-headers
 linux-zen
 linux-zen-headers
+localsend-bin
 luit
 lutris-git
 m4
@@ -195,6 +198,11 @@ mariadb-libs
 mesa-demos
 mesa-vdpau
 milou
+mingw-w64-binutils
+mingw-w64-crt
+mingw-w64-gcc
+mingw-w64-headers
+mingw-w64-winpthreads
 miniconda
 mlocate
 mpv
@@ -224,7 +232,7 @@ opencl-mesa
 openssh
 os-prober
 oxygen
-p7zip
+p7zip-natspec
 pacman
 pacman-contrib
 pacman-static
@@ -256,6 +264,7 @@ powertop
 print-manager
 protontricks
 pulseaudio-alsa
+pulseaudio-bluetooth
 pv
 python-aiohttp
 python-jsbeautifier
@@ -268,6 +277,7 @@ python-pipenv
 python-protobuf
 python-psutil
 python-pynvim
+python-pyotp
 python-twisted
 qbittorrent-enhanced-git
 qemu-base
@@ -289,9 +299,11 @@ scapy
 scrcpy
 screenkey
 scrot
+sddm-git
 sddm-kcm
 sed
 simplescreenrecorder
+skopeo
 smartmontools
 sof-firmware
 source-highlight
@@ -320,6 +332,7 @@ ttf-hack-nerd
 ttf-jetbrains-mono
 ttf-joypixels
 ttf-sourcecodepro-nerd
+ttf-wps-fonts
 turbostat
 typora
 ueberzug
@@ -345,6 +358,7 @@ wine-staging
 wireshark-qt
 wpa_supplicant
 wps-office
+wps-office-fonts
 wps-office-mui-zh-cn
 x11vnc
 xclip
@@ -353,7 +367,6 @@ xdg-desktop-portal-kde
 xf86-input-synaptics
 xf86-video-amdgpu
 xf86-video-vesa
-xone-dkms-git
 xorg-bdftopcf
 xorg-docs
 xorg-font-util
@@ -400,6 +413,8 @@ xorg-xwayland
 xorg-xwd
 xorg-xwininfo
 xorg-xwud
+xpadneo-dkms
 youtube-dl
 yt-dlp
+yubikey-manager
 zip
