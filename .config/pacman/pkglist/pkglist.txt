@@ -73,6 +73,7 @@ feeluown-netease
 feeluown-qqmusic
 file
 findutils
+firefox
 firewalld
 flake8
 flameshot
@@ -330,7 +331,6 @@ tree
 ttf-hack-nerd
 ttf-jetbrains-mono
 ttf-joypixels
-ttf-sourcecodepro-nerd
 ttf-wps-fonts
 turbostat
 typora
