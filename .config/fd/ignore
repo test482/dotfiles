@@ -14,13 +14,21 @@
 .git/
 .mozilla/
 .pki/
-.steam/
-.steampath/
 .vmware/
 .vscode-server/
 .vscode/
+
+# Heroic Games Launcher
+Games/Heroic/
+
+# wine
 .wine/
-wallpaper/
+.local/share/wineprefixes/
+
+# Steam Path
+.steam/
+.steampath/
+.local/share/Steam/steamapps/compatdata/
 
 # Python byte-compiled/optimized/DLL files
 __pycache__/
