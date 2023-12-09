@@ -1,0 +1,9 @@
+[Unit]
+Description=aria2c autostart
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/aria2c
+
+[Install]
+WantedBy=default.target
