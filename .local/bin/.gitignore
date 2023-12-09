@@ -2,6 +2,7 @@
 !dot-init-xdg.sh
 !gh-check
 !pacnewdiff
+!pull-github-keys.sh
 !tcping.py
 !touchpadtoggle.sh
 !yt-dlp-wrapper
