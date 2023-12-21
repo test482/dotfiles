@@ -65,9 +65,6 @@ fi
 # bash_completion
 [ -r /usr/share/bash-completion/bash_completion ] && source /usr/share/bash-completion/bash_completion
 
-# custom conf
-[ -f "$HOME"/.config/bash/custom.sh ] && source "$HOME"/.config/bash/custom.sh
-
 alias grep='grep --color'
 alias tree='tree -C'
 
@@ -122,6 +119,9 @@ alias clipboard="xclip -selection clipboard"
 alias Ci="clipboard -i"
 alias Co="clipboard -o"
 alias Copng="Co -target image/png"
+
+# device specific conf
+[ -f "$HOME"/.config/bash/specific-conf ] && source "$HOME"/.config/bash/specific-conf
 
 # Pacman aliases and functions
 alias Syu="sudo pacman -Syu"
