@@ -29,6 +29,7 @@ bottom
 breeze
 breeze-gtk
 btop
+cargo-generate
 cargo-zigbuild
 cef-minimal-obs-bin
 chromium
@@ -66,11 +67,6 @@ fcitx5-pinyin-moegirl
 fcitx5-pinyin-zhwiki
 fcitx5-qt
 fd
-feeluown
-feeluown-bilibili
-feeluown-kuwo
-feeluown-netease
-feeluown-qqmusic
 file
 findutils
 firefox
@@ -133,11 +129,12 @@ kdecoration
 kdegraphics-mobipocket
 kdegraphics-thumbnailers
 kdenetwork-filesharing
+kdenlive
 kdeplasma-addons
 kdialog
 keditbookmarks
 kfind
-kgamma5
+kgamma
 kgpg
 khelpcenter
 khotkeys
@@ -272,6 +269,8 @@ pulseaudio-alsa
 pulseaudio-bluetooth
 pv
 python-aiohttp
+python-chardet
+python-future
 python-jsbeautifier
 python-jsmin
 python-jsonrpclib-pelix
@@ -281,6 +280,7 @@ python-netifaces
 python-pipenv
 python-protobuf
 python-psutil
+python-pycurl
 python-pynvim
 python-pyotp
 python-twisted
@@ -295,14 +295,15 @@ redshift
 remmina
 revda-git
 ripgrep
+rustdesk-git
 rustup
 scapy
 scrcpy
-screenkey
 scrot
 sddm-git
 sddm-kcm
 sed
+showmethekey
 simplescreenrecorder
 skopeo
 smartmontools
@@ -349,6 +350,7 @@ vkd3d
 vmware-workstation
 vulkan-radeon
 vulkan-tools
+wasm-pack
 watt-toolkit-bin
 wget
 which
@@ -411,7 +413,6 @@ xorg-xwayland
 xorg-xwd
 xorg-xwininfo
 xorg-xwud
-xpadneo-dkms
 yt-dlp
 yubikey-manager
 yubikey-manager-qt
