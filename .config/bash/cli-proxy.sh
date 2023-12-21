@@ -19,14 +19,14 @@ clrProxy(){
     done
 }
 
-# usage: myProxy 127.0.0.1:1080
+# usage: myProxy 127.0.0.1:7890
 myProxy(){
     # user=YourUserName
     # read -p "Password: " -s pass &&  echo -e " "
     # proxy_value="http://$user:$pass@ProxyServerAddress:Port"
     if [ $# == 0 ]
     then
-        proxy_array=127.0.0.1:1080
+        proxy_array=127.0.0.1:7890
     elif [ $# == 1 ]
     then
         proxy_array=$1
