@@ -22,37 +22,32 @@ program_exist() {
 }
 
 #alias ls='ls --color=auto'
-if program_exist "exa"; then
-    [ -f "$HOME"/.config/bash/exa.sh ] && source "$HOME"/.config/bash/exa.sh
-fi
+[ -f "$HOME"/.config/bash/exa.sh ] && source "$HOME"/.config/bash/exa.sh
 
 # git
-if program_exist "git"; then
-    [ -f "$HOME"/.config/bash/git.sh ] && source "$HOME"/.config/bash/git.sh
-fi
+[ -f "$HOME"/.config/bash/git.sh ] && source "$HOME"/.config/bash/git.sh
 
 # ranger : A VIM-inspired filemanager for the console
 # https://github.com/ranger/ranger/wiki
-if program_exist "ranger"; then
-    [ -f "$HOME"/.config/bash/ranger.sh ] && source "$HOME"/.config/bash/ranger.sh
-fi
+[ -f "$HOME"/.config/bash/ranger.sh ] && source "$HOME"/.config/bash/ranger.sh
 
 # fzf : A command-line fuzzy finder
 # https://github.com/junegunn/fzf
-if program_exist "fzf" "fd" "bat"; then
-    [ -f "$HOME"/.config/bash/fzf.sh ] && source "$HOME"/.config/bash/fzf.sh
-fi
+[ -f "$HOME"/.config/bash/fzf.sh ] && source "$HOME"/.config/bash/fzf.sh
 
 # yarn : A package manager for Node.js
 [ -f "$XDG_CONFIG_HOME/yarn/config" ] && alias yarn='yarn --use-yarnrc "$XDG_CONFIG_HOME/yarn/config"'
 
-# nvm : node version manager
-[ -f /usr/share/nvm/init-nvm.sh ] && source /usr/share/nvm/init-nvm.sh
+# fnm : Fast Node Manager
+# program_exist "fnm" && eval "$(fnm env --use-on-cd)"
+fnm() {
+    eval "$(/usr/bin/fnm env --use-on-cd)"
+
+    /usr/bin/fnm "$@"
+}
 
 # adb
-if program_exist "adb"; then
-    [ -d "$XDG_DATA_HOME"/android ] && alias adb='HOME="$XDG_DATA_HOME"/android adb'
-fi
+[ -d "$XDG_DATA_HOME"/android ] && alias adb='HOME="$XDG_DATA_HOME"/android adb'
 
 # source conda alias
 [ -f /opt/miniconda/etc/profile.d/conda.sh ] && alias sourceconda='source /opt/miniconda/etc/profile.d/conda.sh'
@@ -94,7 +89,6 @@ alias bc="bc -lq"                                 # calculator
 alias pvb="pv -W -F'All:%b In:%t Cu:%r Av:%a %p'" # monitor the progress of data through a pipe
 alias kwin-blur="xprop -f _KDE_NET_WM_BLUR_BEHIND_REGION 32c -set _KDE_NET_WM_BLUR_BEHIND_REGION 0"
 alias kwin-clear="xprop -f _KDE_NET_WM_BLUR_BEHIND_REGION 32c -remove _KDE_NET_WM_BLUR_BEHIND_REGION"
-alias scrcpy='scrcpy --disable-screensaver --hid-keyboard --stay-awake --turn-screen-off --power-off-on-close'
 alias gtar="tar -Ipigz czfv"
 alias btar="tar -Ilbzip2 cjfv"
 alias 7tar="7z a -mmt"
@@ -169,7 +163,6 @@ man() {
 alias cman="env LANG=zh_CN.UTF-8 man"
 
 # PS1='[\u@\h \W]\$ ' # default style
-# PS1='\[\e[1;32m\]\u\[\e[m\]\[\e[0;32m\]@\h\[\e[m\] \[\e[1;34m\]\w\[\e[m\] \[\e[1;32m\]\$\[\e[m\] ' # farseerfc style
 PS1='\[\033]0;\w\007\]\n\[\033[32m\]\D{%R} \u@\[\033[35m\]\h \[\033[33m\]\w\[\033[36m\]\[\033[0m\]\n$ ' # Git Bash for Windows style
 
 # Some Tricks
