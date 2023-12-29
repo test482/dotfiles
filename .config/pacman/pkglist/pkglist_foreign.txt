@@ -1,6 +1,7 @@
 antidot-git
 clash-meta-cap-git
 cloudflare-wrangler2
+ff2mpv-rust
 gobang-bin
 java-lombok
 java11-openjfx
@@ -21,4 +22,4 @@ systemd-cleanup-pacman-hook
 tmux-bash-completion-git
 xdg-ninja-git
 xpadneo-dkms-git
-youtube-dl
+ytdl-shim

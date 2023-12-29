@@ -25,7 +25,6 @@ binutils
 bison
 bluedevil
 bluez-utils
-bottom
 breeze
 breeze-gtk
 btop
@@ -52,6 +51,7 @@ dos2unix
 downgrade
 drkonqi
 duf
+dust
 efibootmgr
 extra-cmake-modules
 eza
@@ -74,6 +74,7 @@ firewalld
 flake8
 flameshot
 flex
+fnm
 fprintd
 freerdp
 fwupd
@@ -88,6 +89,7 @@ gimp
 gimp-help-en
 gimp-help-zh_cn
 git
+gitui
 glow
 gnome-keyring
 go
@@ -100,7 +102,6 @@ gwenview
 gzip
 heroic-games-launcher-bin
 htop
-icalingua++
 imagemagick
 inetutils
 ioping
@@ -133,6 +134,7 @@ kdenlive
 kdeplasma-addons
 kdialog
 keditbookmarks
+keepassxc
 kfind
 kgamma
 kgpg
@@ -157,7 +159,6 @@ kwave
 kwayland-integration
 kwin
 kwrited
-lazygit
 lib32-gst-plugins-base-libs
 lib32-libdbusmenu-glib
 lib32-libdbusmenu-gtk2
@@ -207,7 +208,6 @@ mingw-w64-winpthreads
 miniconda
 mlocate
 mpv
-neofetch
 neovim
 neovim-symlinks
 netctl
@@ -224,7 +224,6 @@ noto-fonts-cjk
 ntfs-3g
 ntp
 nvim-packer-git
-nvm
 nvtop
 ocl-icd
 okular
@@ -309,6 +308,7 @@ skopeo
 smartmontools
 sof-firmware
 source-highlight
+sshfs
 steam
 steam-native-runtime
 strace
@@ -320,6 +320,7 @@ sweeper
 syncthing
 systemsettings
 tailscale
+tealdeer
 teamspeak3
 telegram-desktop
 terminus-font
@@ -352,6 +353,7 @@ vulkan-radeon
 vulkan-tools
 wasm-pack
 watt-toolkit-bin
+wezterm
 wget
 which
 wine-staging
@@ -416,4 +418,5 @@ xorg-xwud
 yt-dlp
 yubikey-manager
 yubikey-manager-qt
+zellij
 zip
