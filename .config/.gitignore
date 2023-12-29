@@ -17,6 +17,7 @@
 !/systemd/
 !/tmux/
 !/yarn/
+!/wezterm/
 !chromium-flags.conf
 !user-dirs.dirs
 !user-dirs.locale
