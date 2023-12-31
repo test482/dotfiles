@@ -1,9 +1,6 @@
 [user]
     name = test482
     email = eliotjoking@gmail.com
-    signingkey = C93A9920D7528EFA65119C772F0E468F2FEC3A83
-[commit]
-    gpgsign = true
 [core]
     autocrlf = input
     editor = vim
