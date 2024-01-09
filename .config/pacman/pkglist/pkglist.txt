@@ -23,6 +23,7 @@ bc
 bind
 binutils
 bison
+bitwarden
 bluedevil
 bluez-utils
 breeze
@@ -34,7 +35,6 @@ cef-minimal-obs-bin
 chromium
 clash
 clash-meta
-clash-verge
 cmake
 cowsay
 cpupower
@@ -134,7 +134,6 @@ kdenlive
 kdeplasma-addons
 kdialog
 keditbookmarks
-keepassxc
 kfind
 kgamma
 kgpg
@@ -348,7 +347,6 @@ virt-manager
 virt-viewer
 visual-studio-code-bin
 vkd3d
-vmware-workstation
 vulkan-radeon
 vulkan-tools
 wasm-pack
