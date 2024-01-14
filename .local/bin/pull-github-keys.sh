@@ -1,4 +1,4 @@
-#!/bin/env bash
+#! /usr/bin/env bash
 
 usernames=("test482")
 
@@ -19,7 +19,7 @@ fi
 for username in "${usernames[@]}"; do
     link="https://github.com/$username.keys"
     echo "Downloading content from $link."
-    curl --remote-name --location --output-dir "$runtime_dir" "$link"
+    curl --remote-name --location --output-dir "$runtime_dir" "$link" || exit 1
 done
 
 # 遍历 $XDG_RUNTIME_DIR/github-user-ssh-keys 文件夹中的每个文件
