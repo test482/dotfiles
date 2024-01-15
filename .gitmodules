@@ -1,9 +1,3 @@
-[submodule ".config/tmux/plugins/tpm"]
-	path = .config/tmux/plugins/tpm
-	url = https://github.com/tmux-plugins/tpm
-[submodule ".config/tmux/plugins/tmux-copycat"]
-	path = .config/tmux/plugins/tmux-copycat
-	url = https://github.com/tmux-plugins/tmux-copycat
 [submodule ".config/mpv/scripts/mpv_sponsorblock_minimal"]
 	path = .config/mpv/scripts/mpv_sponsorblock_minimal
 	url = https://codeberg.org/jouni/mpv_sponsorblock_minimal.git
