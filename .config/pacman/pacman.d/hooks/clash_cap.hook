@@ -1,9 +1,0 @@
-[Trigger]
-Operation = Install
-Operation = Upgrade
-Type = Path
-Target = usr/bin/clash
-
-[Action]
-When = PostTransaction
-Exec = /usr/bin/setcap cap_net_admin,cap_net_bind_service=ep /usr/bin/clash
