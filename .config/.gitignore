@@ -12,12 +12,12 @@
 !/nvim/
 !/pacman/
 !/python/
-!/ranger/
 !/ripgrep/
 !/systemd/
 !/tmux/
-!/yarn/
 !/wezterm/
+!/yarn/
+!/yazi/
 !chromium-flags.conf
 !user-dirs.dirs
 !user-dirs.locale

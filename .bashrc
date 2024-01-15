@@ -27,9 +27,9 @@ program_exist() {
 # git
 [ -f "$HOME"/.config/bash/git.sh ] && source "$HOME"/.config/bash/git.sh
 
-# ranger : A VIM-inspired filemanager for the console
-# https://github.com/ranger/ranger/wiki
-[ -f "$HOME"/.config/bash/ranger.sh ] && source "$HOME"/.config/bash/ranger.sh
+# yazi: Blazing fast terminal file manager written in Rust
+# https://yazi-rs.github.io/docs/installation
+[ -f "$HOME"/.config/bash/yazi.sh ] && source "$HOME"/.config/bash/yazi.sh
 
 # fzf : A command-line fuzzy finder
 # https://github.com/junegunn/fzf
