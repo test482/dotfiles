@@ -1,8 +1,7 @@
+bubblejail
 clash-meta-cap-git
-clash-verge
 cloudflare-wrangler2
 ff2mpv-rust
-gobang-bin
 java-lombok
 java11-openjfx
 java11-openjfx-doc
@@ -10,12 +9,8 @@ lib32-obs-vkcapture-git
 linuxqq-nt-bwrap
 lorien-bin
 microsoft-edge-stable-bin
-obs-gstreamer
-obs-studio-tytan652
-obs-vkcapture-git
-paclog
 profile-sync-daemon-edge
-rusty-hook
+protonup-qt
 sddm-sugar-candy-git
 sddm-theme-corners-git
 systemd-cleanup-pacman-hook

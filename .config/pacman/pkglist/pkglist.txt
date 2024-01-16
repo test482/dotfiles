@@ -35,6 +35,7 @@ cef-minimal-obs-bin
 chromium
 clash
 clash-meta
+clash-verge
 cmake
 cowsay
 cpupower
@@ -67,6 +68,7 @@ fcitx5-pinyin-moegirl
 fcitx5-pinyin-zhwiki
 fcitx5-qt
 fd
+ffmpeg
 file
 findutils
 firefox
@@ -222,8 +224,8 @@ noto-fonts
 noto-fonts-cjk
 ntfs-3g
 ntp
-nvim-packer-git
 nvtop
+obs-studio
 ocl-icd
 okular
 onedrive-abraunegg
@@ -235,6 +237,7 @@ p7zip-natspec
 pacman
 pacman-contrib
 pacman-static
+pacutils
 pacvis-git
 pandoc-bin
 papirus-icon-theme
@@ -286,7 +289,6 @@ qbittorrent-enhanced-git
 qemu-base
 qt5-base
 radeontop
-ranger
 read-edid
 redis
 redshift
@@ -328,6 +330,7 @@ texlive-basic
 texlive-langchinese
 timeshift
 tmux
+topgrade
 tree
 ttf-hack-nerd
 ttf-jetbrains-mono
@@ -335,7 +338,7 @@ ttf-joypixels
 ttf-wps-fonts
 turbostat
 typora
-ueberzug
+ueberzugpp
 unarchiver
 unrar
 unzip
@@ -413,6 +416,7 @@ xorg-xwayland
 xorg-xwd
 xorg-xwininfo
 xorg-xwud
+yazi
 yt-dlp
 yubikey-manager
 yubikey-manager-qt
