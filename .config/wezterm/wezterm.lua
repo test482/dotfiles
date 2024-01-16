@@ -6,9 +6,7 @@ local config = {}
 
 config.automatically_reload_config = false
 
--- config.color_scheme = 'nord'
-local themes = { 'Breeze', 'GitHub Dark', 'idea', 'nord' }
-config.color_scheme = themes[math.random(#themes)]
+config.color_scheme = 'Breeze'
 
 config.font_size = 12.0
 config.font = wezterm.font_with_fallback {
