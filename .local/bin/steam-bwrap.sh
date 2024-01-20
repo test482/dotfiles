@@ -126,4 +126,9 @@ bind \
 	/tmp/.ICE-unix \
 	/tmp/.X11-unix
 
+# fix Steam unable to open a connection to X
+if [ -n "$DISPLAY" ]; then
+	xhost +si:localuser:$(whoami)
+fi
+
 exec bwrap "${args[@]}" /usr/lib/steam/steam "$@"
