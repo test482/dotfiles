@@ -127,7 +127,7 @@ bind \
 	/tmp/.X11-unix
 
 # fix Steam unable to open a connection to X
-if [ -n "$DISPLAY" ]; then
+if [ "$XDG_SESSION_TYPE" = "x11" ]; then
 	xhost +si:localuser:$(whoami)
 fi
 
