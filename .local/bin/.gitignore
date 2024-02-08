@@ -3,8 +3,8 @@
 !gh-check
 !pacnewdiff
 !pull-github-keys.sh
+!steam-bwrap-hk.sh
 !steam-bwrap.sh
-!steam-cn.desktop.example
 !tcping.py
 !touchpadtoggle.sh
 !yt-dlp-wrapper
