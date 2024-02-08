@@ -200,6 +200,7 @@ mariadb-libs
 mbedtls2
 mesa-demos
 mesa-vdpau
+microsoft-edge-stable-bin
 milou
 mingw-w64-binutils
 mingw-w64-crt
@@ -416,7 +417,7 @@ xorg-xwayland
 xorg-xwd
 xorg-xwininfo
 xorg-xwud
-yazi
+yazi-git
 yt-dlp
 yubikey-manager
 yubikey-manager-qt
