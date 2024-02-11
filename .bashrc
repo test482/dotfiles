@@ -12,15 +12,6 @@ export HISTFILE="$XDG_STATE_HOME"/bash/history
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-program_exist() {
-    for arg in "$@"; do
-        if ! command -v "$arg" >/dev/null 2>&1; then
-            return 1
-        fi
-    done
-    return 0
-}
-
 #alias ls='ls --color=auto'
 [ -f "$HOME"/.config/bash/exa.sh ] && source "$HOME"/.config/bash/exa.sh
 
@@ -39,7 +30,7 @@ program_exist() {
 [ -f "$XDG_CONFIG_HOME/yarn/config" ] && alias yarn='yarn --use-yarnrc "$XDG_CONFIG_HOME/yarn/config"'
 
 # fnm : Fast Node Manager
-# program_exist "fnm" && eval "$(fnm env --use-on-cd)"
+#command -v "fnm" >/dev/null 2>&1 && eval "$(fnm env --use-on-cd)"
 fnm() {
     eval "$(/usr/bin/fnm env --use-on-cd)"
 
@@ -101,14 +92,6 @@ alias :wq="sync && exit"
 # fars.ee is a temporary deployment of pb by farseerfc
 alias pb="curl -F 'c=@-' 'https://fars.ee/'"
 
-# Search for console tips and tricks via https://cheat.sh service.
-# https://github.com/chubin/cheat.sh
-# example usage: cheat python say hello world
-cheat() {
-    local query=$(echo "$*" | sed 's@ *$@@; s@^ *@@; s@ @/@; s@ @+@g')
-    curl https://cheat.sh/"$query"
-}
-
 alias clipboard="xclip -selection clipboard"
 alias Ci="clipboard -i"
 alias Co="clipboard -o"
@@ -141,13 +124,11 @@ alias Fy="sudo pacman -Fy"
 alias Sy="sudo pacman -Sy"
 
 # paru: aur helper
-alias a='paru --noconfirm'
-alias Syua="a -Syu"
-alias Sya='a -Sy'
-alias Ssa="a -Ssa"
-alias Sas="a -Ssa"
-alias Sia="a -Sai"
-alias Sai="a -Sai"
+alias _aur_helper='paru'
+alias Syua="_aur_helper -Syu --noconfirm"
+alias Sya='_aur_helper -Sy --aur'
+alias Ssa="_aur_helper -Ss --aur"
+alias Sia="_aur_helper -Si --aur"
 
 man() {
     env \
@@ -164,14 +145,3 @@ alias cman="env LANG=zh_CN.UTF-8 man"
 
 # PS1='[\u@\h \W]\$ ' # default style
 PS1='\[\033]0;\w\007\]\n\[\033[32m\]\D{%R} \u@\[\033[35m\]\h \[\033[33m\]\w\[\033[36m\]\[\033[0m\]\n$ ' # Git Bash for Windows style
-
-# Some Tricks
-
-# Start tmux on every shell login
-#if which tmux >/dev/null 2>&1; then
-#    #if not inside a tmux session, and if no session is started, start a new session
-#    test -z "$TMUX" && (tmux attach -t tmux || tmux new-session -s tmux)
-#fi
-
-# Use Trash replace rm
-#alias rm='trash-put'
