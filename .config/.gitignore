@@ -1,6 +1,7 @@
 !/autostart/
 !/bash/
 !/environment.d/
+!/etc/
 !/fd/
 !/fontconfig/
 !/git/
