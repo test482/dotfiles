@@ -1,6 +1,29 @@
 #! /usr/bin/env bash
 
-_init_xdg_dir() {
+_check_xdg_dir_env() {
+    if [ -z "$XDG_CACHE_HOME" ]; then
+        export XDG_CACHE_HOME=$HOME/.cache
+    fi
+
+    if [ -z "$XDG_CONFIG_HOME" ]; then
+        export XDG_CONFIG_HOME=$HOME/.config
+    fi
+
+    if [ -z "$XDG_DATA_HOME" ]; then
+        export XDG_DATA_HOME=$HOME/.local/share
+    fi
+
+    if [ -z "$XDG_STATE_HOME" ]; then
+        export XDG_STATE_HOME=$HOME/.local/state
+    fi
+
+    echo "XDG_CACHE_HOME: $XDG_CACHE_HOME"
+    echo "XDG_CONFIG_HOME: $XDG_CONFIG_HOME"
+    echo "XDG_DATA_HOME: $XDG_DATA_HOME"
+    echo "XDG_STATE_HOME: $XDG_STATE_HOME"
+}
+
+_create_xdg_dir() {
     # if xdg dir not exist, create it
     if [ ! -d $XDG_CACHE_HOME ]; then
         mkdir -p $XDG_CACHE_HOME
@@ -17,8 +40,8 @@ _init_xdg_dir() {
 }
 
 _copy_pacman_conf_to_etc() {
-    sudo cp $HOME/.config/pacman/pacman.conf /etc/pacman.conf &&
-        sudo cp -r $HOME/.config/pacman/pacman.d /etc/
+    sudo cp $HOME/.config/etc/pacman.conf /etc/pacman.conf &&
+        sudo cp -r $HOME/.config/etc/pacman.d /etc/
 }
 
 _init_archlinuxcn_repo() {
@@ -26,7 +49,6 @@ _init_archlinuxcn_repo() {
     if grep -q '\[archlinuxcn\]' /etc/pacman.conf; then
         sudo pacman -Sy archlinuxcn-keyring
     fi
-
 }
 
 _init_arch4edu_repo() {
@@ -37,6 +59,12 @@ _init_arch4edu_repo() {
             sudo pacman-key --finger 7931B6D628C8D3BA &&
             sudo pacman-key --lsign-key 7931B6D628C8D3BA
     fi
+}
+
+_init_eliot_repo() {
+    curl -L -o /tmp/eliot-repo.key https://ghproxy.ecorp.one/https://raw.githubusercontent.com/test482/aur_build/master/gpg-keys/arch-repo.key &&
+        sudo pacman-key --add /tmp/eliot-repo.key &&
+        sudo pacman-key --lsign-key eliotjoking@gmail.com
 }
 
 _pull_github_keys() {
@@ -74,9 +102,12 @@ _init_some_apps_xdg() {
 }
 
 # main
+_check_xdg_dir_env
+_create_xdg_dir
 _copy_pacman_conf_to_etc
 _init_archlinuxcn_repo
 _init_arch4edu_repo
+_init_eliot_repo
 _pull_github_keys
 _enable_user_systemd_services
 _init_some_apps_xdg
