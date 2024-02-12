@@ -5,6 +5,7 @@ ff2mpv-rust
 java-lombok
 java11-openjfx
 java11-openjfx-doc
+keyd
 linuxqq-nt-bwrap
 lorien-bin
 profile-sync-daemon-edge
@@ -14,6 +15,7 @@ sddm-theme-corners-git
 systemd-cleanup-pacman-hook
 thinkfan-ui
 tmux-bash-completion-git
+try
 xdg-ninja-git
 xpadneo-dkms-git
 ytdl-shim
