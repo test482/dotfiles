@@ -5,9 +5,9 @@ ff2mpv-rust
 java-lombok
 java11-openjfx
 java11-openjfx-doc
-keyd
 linuxqq-nt-bwrap
 lorien-bin
+obs-plugin-input-overlay
 profile-sync-daemon-edge
 protonup-qt
 sddm-sugar-candy-git
@@ -18,4 +18,3 @@ tmux-bash-completion-git
 try
 xdg-ninja-git
 xpadneo-dkms-git
-ytdl-shim
