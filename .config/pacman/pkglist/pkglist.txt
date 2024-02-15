@@ -266,6 +266,7 @@ powerline
 powerline-fonts
 powertop
 print-manager
+procs
 protontricks
 pulseaudio-alsa
 pulseaudio-bluetooth
@@ -304,6 +305,7 @@ scrot
 sddm-git
 sddm-kcm
 sed
+shellharden
 showmethekey
 simplescreenrecorder
 skopeo
@@ -423,3 +425,4 @@ yubikey-manager
 yubikey-manager-qt
 zellij
 zip
+zoxide

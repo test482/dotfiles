@@ -126,7 +126,7 @@ alias Sy="sudo pacman -Sy"
 # paru: aur helper
 alias _aur_helper='paru'
 alias Syua="_aur_helper -Syu --noconfirm"
-alias Sya='_aur_helper -Sy --aur'
+alias Sya="_aur_helper -Sy --aur"
 alias Ssa="_aur_helper -Ss --aur"
 alias Sia="_aur_helper -Si --aur"
 
@@ -145,3 +145,6 @@ alias cman="env LANG=zh_CN.UTF-8 man"
 
 # PS1='[\u@\h \W]\$ ' # default style
 PS1='\[\033]0;\w\007\]\n\[\033[32m\]\D{%R} \u@\[\033[35m\]\h \[\033[33m\]\w\[\033[36m\]\[\033[0m\]\n$ ' # Git Bash for Windows style
+
+# zoxide : A smarter cd command.
+command -v "zoxide" >/dev/null 2>&1 && eval "$(zoxide init bash)"
