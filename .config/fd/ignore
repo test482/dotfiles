@@ -5,30 +5,30 @@
 #    --no-ignore        : don't respect .ignore, .gitignore, .fdignore
 #    --no-ignore-vcs    : don't respect .ignore files
 
-####Custom ignore####
-*.bak
-*.log
-*.sha1
 .cache/
 .dotfiles/
 .git/
+.java/
 .mozilla/
 .pki/
 .vmware/
 .vscode-server/
 .vscode/
+*.bak
+*.sha1
+flatpak/
 
 # Heroic Games Launcher
-Games/Heroic/
+Games/
 
 # wine
-.wine/
 .local/share/wineprefixes/
+.wine/
 
 # Steam Path
+.local/share/Steam/
 .steam/
 .steampath/
-.local/share/Steam/steamapps/compatdata/
 
 # Python byte-compiled/optimized/DLL files
 __pycache__/
