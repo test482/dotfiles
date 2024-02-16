@@ -1,0 +1,13 @@
+# https://specifications.freedesktop.org/desktop-entry-spec/desktop-entry-spec-latest.html#extra-actions
+# https://develop.kde.org/docs/apps/dolphin/service-menus/
+
+[Desktop Entry]
+Type=Service
+MimeType=video/*;
+Actions=converttoMP4;
+
+[Desktop Action converttoMP4]
+Exec="$HOME/.local/bin/converttoMP4.sh" "%U"
+Icon=ffmpeg
+Name[zh_CN]=转换为 MP4 格式
+Name=ffmpeg to MP4 format
