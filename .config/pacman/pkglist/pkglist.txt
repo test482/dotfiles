@@ -4,7 +4,6 @@ adobe-source-code-pro-fonts
 alacritty
 alsa-firmware
 amd-ucode
-amdvlk
 android-tools
 android-udev
 arch-install-scripts
@@ -33,7 +32,6 @@ cargo-generate
 cargo-zigbuild
 cef-minimal-obs-bin
 chromium
-clash
 clash-meta
 clash-verge
 cmake
@@ -95,7 +93,6 @@ gitui
 glow
 gnome-keyring
 go
-goverlay
 gparted
 grep
 groff
@@ -423,6 +420,5 @@ yazi-git
 yt-dlp
 yubikey-manager
 yubikey-manager-qt
-zellij
 zip
 zoxide
