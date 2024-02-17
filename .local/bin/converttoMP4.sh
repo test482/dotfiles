@@ -1,5 +1,10 @@
 #!/usr/bin/env bash
 
+notify_args=(
+    --app-name="convert to MP4"
+    --icon="ffmpeg"
+)
+
 for input_file in $@; do
     # /video/foo.mkv
     base_name=$(basename "$input_file" | cut -d. -f1) # foo
@@ -9,13 +14,13 @@ for input_file in $@; do
 
     # skip MP4 video
     if [ "$mime_type" == "video/mp4" ]; then
-        notify-send "'$base_name' already be MP4 format, skipping."
+        notify-send "${notify_args[@]}" "Skipping" "'$base_name' already be MP4 format."
         continue
     fi
 
     # check source file is readable
     if [ ! -r "$input_file" ]; then
-        notify-send "'$base_name' is not readable, skipping."
+        notify-send "${notify_args[@]}" "Skipping" "'$base_name' is not readable."
         continue
     fi
 
@@ -29,10 +34,10 @@ for input_file in $@; do
 
     # check same name file
     if [ -e "$output_path" ]; then
-        notify-send "'$output_file' already exists, skipping."
+        notify-send "${notify_args[@]}" "Skipping" "'$output_file' already exists."
         continue
     fi
 
     # ffmpeg
-    ffmpeg -i "$input_file" -codec copy "$output_path" && notify-send "Conversion completed" "'$output_path'"
+    ffmpeg -i "$input_file" -codec copy "$output_path" && notify-send "${notify_args[@]}" "Completed" "'$output_path'"
 done
