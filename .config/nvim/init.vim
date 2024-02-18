@@ -3,9 +3,11 @@ set nocompatible " 关闭vi兼容模式
 " 修复 neovim 与 powerline-vim 的不兼容问题
 let g:powerline_loaded = 1
 
-" jump to the last position when reopening a file
 if has("autocmd")
-  au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+  " jump to the last position when reopening a file
+  autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+  " create parent dir of current file if it does not exist
+  autocmd BufWritePre * call mkdir(expand("<afile>:p:h"), "p")
 endif
 
 syntax on " 语法高亮
