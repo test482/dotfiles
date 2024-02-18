@@ -165,6 +165,8 @@ lib32-libva-mesa-driver
 lib32-libxslt
 lib32-mesa-vdpau
 lib32-ocl-icd
+lib32-pipewire-jack
+lib32-pipewire-v4l2
 lib32-v4l-utils
 lib32-vulkan-radeon
 libdbusmenu-gtk2
@@ -242,6 +244,11 @@ papirus-icon-theme
 paru
 patch
 pcsclite
+pipewire-alsa
+pipewire-audio
+pipewire-jack
+pipewire-pulse
+pipewire-v4l2
 pkgconf
 pkgfile
 plasma-browser-integration
@@ -265,8 +272,6 @@ powertop
 print-manager
 procs
 protontricks
-pulseaudio-alsa
-pulseaudio-bluetooth
 pv
 python-aiohttp
 python-chardet
@@ -289,6 +294,7 @@ qemu-base
 qt5-base
 radeontop
 read-edid
+realtime-privileges
 redis
 redshift
 remmina
