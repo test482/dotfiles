@@ -26,9 +26,9 @@ alias gr=jump-to-git-root
 
 # gitmydot
 # https://wiki.archlinux.org/title/Dotfiles#Tracking_dotfiles_directly_with_Git
-alias gitdot='/usr/bin/git --git-dir=$HOME/.config/.dotfiles/ --work-tree=$HOME'
+alias dotgit='/usr/bin/git --git-dir=$HOME/.config/.dotfiles/ --work-tree=$HOME'
 [ -f /usr/share/bash-completion/completions/git ] && source /usr/share/bash-completion/completions/git
-__git_complete gitdot __git_main
+__git_complete dotgit __git_main
 
 # gitui
-alias gituidot='/usr/bin/gitui --directory=$HOME/.config/.dotfiles/ --workdir=$HOME'
+alias dotui='/usr/bin/gitui --directory=$HOME/.config/.dotfiles/ --workdir=$HOME'
