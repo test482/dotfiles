@@ -288,6 +288,7 @@ python-psutil
 python-pycurl
 python-pynvim
 python-pyotp
+python-telethon
 python-twisted
 qbittorrent-enhanced-git
 qemu-base
@@ -343,7 +344,6 @@ ttf-jetbrains-mono
 ttf-joypixels
 ttf-wps-fonts
 turbostat
-typora
 ueberzugpp
 unarchiver
 unrar

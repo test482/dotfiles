@@ -8,13 +8,13 @@ java11-openjfx-doc
 linuxqq-nt-bwrap
 lorien-bin
 obs-plugin-input-overlay
-profile-sync-daemon-edge
+profile-sync-daemon-edge-stable
 protonup-qt
 sddm-sugar-candy-git
-sddm-theme-corners-git
 systemd-cleanup-pacman-hook
 thinkfan-ui
 tmux-bash-completion-git
 try
+typora
 xdg-ninja-git
 xpadneo-dkms-git
