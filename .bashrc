@@ -40,9 +40,6 @@ fnm() {
 # adb
 [ -d "$XDG_DATA_HOME"/android ] && alias adb='HOME="$XDG_DATA_HOME"/android adb'
 
-# source conda alias
-[ -f /opt/miniconda/etc/profile.d/conda.sh ] && alias sourceconda='source /opt/miniconda/etc/profile.d/conda.sh'
-
 # Set CLI proxy server
 # https://wiki.archlinux.org/index.php/Proxy_server#Environment_variables
 # also check this repo: (https://github.com/comwrg/FUCK-GFW)

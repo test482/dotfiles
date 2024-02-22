@@ -1,6 +1,7 @@
 bubblejail
 clash-meta-cap-git
 cloudflare-wrangler2
+distro-grub-themes-arch
 ff2mpv-rust
 java-lombok
 java11-openjfx

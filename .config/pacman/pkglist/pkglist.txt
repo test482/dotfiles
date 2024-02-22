@@ -56,6 +56,7 @@ extra-cmake-modules
 eza
 fail2ban
 fakeroot
+fastfetch
 fcitx5
 fcitx5-chinese-addons
 fcitx5-configtool
@@ -206,7 +207,6 @@ mingw-w64-crt
 mingw-w64-gcc
 mingw-w64-headers
 mingw-w64-winpthreads
-miniconda
 mlocate
 mpv
 neovim
@@ -288,7 +288,6 @@ python-psutil
 python-pycurl
 python-pynvim
 python-pyotp
-python-telethon
 python-twisted
 qbittorrent-enhanced-git
 qemu-base
