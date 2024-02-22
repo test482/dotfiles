@@ -73,7 +73,6 @@ alias dcp="docker-compose"
 alias dimageupdate='docker images --format "{{.Repository}}:{{.Tag}}" | grep ':latest' | xargs -L1 docker pull;'
 
 alias .="source"
-alias neo="macchina"
 alias cp="cp -i --reflink=auto"
 alias ssh="TERM=xterm-256color ssh"
 alias bc="bc -lq"                                 # calculator
