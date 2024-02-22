@@ -1,0 +1,16 @@
+#!/bin/sh
+exec tail -n +3 $0
+# This file provides an easy way to add custom menu entries.  Simply type the
+# menu entries you want to add after this comment.  Be careful not to change
+# the 'exec tail' line above.
+menuentry '[loopback] ArchLinux CustomISO - Jerry' {
+    insmod ext2
+    insmod search_fs_uuid
+    set uuid='find uuid by lsblk --fs'
+    search --no-floppy --set=isopart --fs-uuid $uuid
+    set isofile='/opt/grub-iso/archiso-jerry.iso'
+    set imgdevpath="/dev/disk/by-uuid/$uuid"
+    loopback loop ($isopart)$isofile
+    linux (loop)/arch/boot/x86_64/vmlinuz-linux img_dev=$imgdevpath img_loop=$isofile earlymodules=loop
+    initrd (loop)/arch/boot/intel-ucode.img (loop)/arch/boot/amd-ucode.img (loop)/arch/boot/x86_64/initramfs-linux.img
+}
