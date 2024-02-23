@@ -1,4 +1,5 @@
 bubblejail
+chromium-extension-web-store
 clash-meta-cap-git
 cloudflare-wrangler2
 distro-grub-themes-arch
@@ -9,7 +10,7 @@ java11-openjfx-doc
 linuxqq-nt-bwrap
 lorien-bin
 obs-plugin-input-overlay
-profile-sync-daemon-edge-stable
+plasma5-applets-todolist
 protonup-qt
 sddm-sugar-candy-git
 systemd-cleanup-pacman-hook

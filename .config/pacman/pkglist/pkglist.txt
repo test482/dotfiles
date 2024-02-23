@@ -31,7 +31,6 @@ btop
 cargo-generate
 cargo-zigbuild
 cef-minimal-obs-bin
-chromium
 clash-meta
 clash-verge
 cmake
@@ -200,7 +199,6 @@ mariadb-libs
 mbedtls2
 mesa-demos
 mesa-vdpau
-microsoft-edge-stable-bin
 milou
 mingw-w64-binutils
 mingw-w64-crt
@@ -262,7 +260,6 @@ plasma-thunderbolt
 plasma-vault
 plasma-workspace
 plasma-workspace-wallpapers
-plasma5-applets-active-window-control
 plasma5-applets-netspeed
 polkit-kde-agent
 powerdevil
@@ -345,6 +342,7 @@ ttf-wps-fonts
 turbostat
 ueberzugpp
 unarchiver
+ungoogled-chromium
 unrar
 unzip
 usbutils
