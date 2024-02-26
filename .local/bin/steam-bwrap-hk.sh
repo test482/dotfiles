@@ -73,6 +73,7 @@ bind \
 	"$HOME/.steampath" \
 	"$HOME/.steampid" \
 	"$HOME/Downloads" \
+	"$HOME/Games" \
 	"$RUN_USER"/.mutter-X* \
 	"$RUN_USER"/ICE* \
 	"$RUN_USER"/dbus* \
