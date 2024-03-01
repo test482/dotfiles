@@ -4,7 +4,6 @@
 !gh-check
 !pacnewdiff
 !pull-github-keys.sh
-!steam-bwrap-hk.sh
 !steam-bwrap.sh
 !tcping.py
 !touchpadtoggle.sh
