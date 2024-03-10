@@ -48,6 +48,7 @@ args=(
     --symlink /usr/bin /bin
     --symlink /usr/bin /sbin
     --symlink /run /var/run
+    --setenv XAUTHORITY "$XAUTHORITY"
 )
 
 robind \
@@ -66,6 +67,7 @@ devbind \
 
 # steam
 bind \
+    "$XAUTHORITY" \
     "$HOME/.Xauthority" \
     "$HOME/.local/bin/proton" \
     "$HOME/.pki" \
@@ -93,10 +95,5 @@ bind \
     /run/systemd \
     /tmp/.ICE-unix \
     /tmp/.X11-unix
-
-# fix Steam unable to open a connection to X
-if [ "$XDG_SESSION_TYPE" = "x11" ]; then
-    xhost +si:localuser:"$(whoami)"
-fi
 
 exec bwrap "${args[@]}" /usr/lib/steam/steam "$@"
