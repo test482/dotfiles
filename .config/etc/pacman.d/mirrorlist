@@ -1,1 +1,7 @@
-Server = https://mirrors.bfsu.edu.cn/archlinux/$repo/os/$arch
+Server = https://mirrors.wsyu.edu.cn/archlinux/$repo/os/$arch
+
+CacheServer = https://mirrors.cloud.tencent.com/archlinux/$repo/os/$arch
+CacheServer = https://mirrors.aliyun.com/archlinux/$repo/os/$arch
+CacheServer = https://mirrors.bfsu.edu.cn/archlinux/$repo/os/$arch
+CacheServer = https://mirror.sjtu.edu.cn/archlinux/$repo/os/$arch
+CacheServer = https://mirrors.wsyu.edu.cn/archlinux/$repo/os/$arch
