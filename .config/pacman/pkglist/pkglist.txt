@@ -17,6 +17,7 @@ autoconf
 automake
 autopep8
 base
+base-devel
 bat
 bc
 bind
@@ -30,7 +31,6 @@ breeze-gtk
 btop
 cargo-generate
 cargo-zigbuild
-cef-minimal-obs-bin
 clash-meta
 clash-verge
 cmake
@@ -104,14 +104,12 @@ htop
 imagemagick
 inetutils
 ioping
-iotop
 iperf3
 ipset
 iptables
 jdk-openjdk
 jdk11-openjdk
 jdk8-openjdk
-jetbrains-toolbox
 joyutils
 junit
 kactivitymanagerd
@@ -137,7 +135,6 @@ kfind
 kgamma
 kgpg
 khelpcenter
-khotkeys
 kimagemapeditor
 kinfocenter
 kleopatra
@@ -148,7 +145,6 @@ kruler
 kscreen
 kscreenlocker
 ksshaskpass
-ksysguard
 ksystemlog
 ktimer
 kwallet-pam
@@ -163,6 +159,7 @@ lib32-libdbusmenu-gtk2
 lib32-libdbusmenu-gtk3
 lib32-libva-mesa-driver
 lib32-libxslt
+lib32-mangohud
 lib32-mesa-vdpau
 lib32-ocl-icd
 lib32-pipewire-jack
@@ -183,7 +180,6 @@ linux-lts
 linux-lts-headers
 linux-zen
 linux-zen-headers
-localsend-bin
 luit
 lutris-git
 m4
@@ -206,7 +202,9 @@ mingw-w64-gcc
 mingw-w64-headers
 mingw-w64-winpthreads
 mlocate
+moonlight-qt
 mpv
+navi
 neovim
 neovim-symlinks
 netctl
@@ -260,7 +258,8 @@ plasma-thunderbolt
 plasma-vault
 plasma-workspace
 plasma-workspace-wallpapers
-plasma5-applets-netspeed
+plasma6-applets-fokus
+plasma6-applets-netspeed
 polkit-kde-agent
 powerdevil
 powerline
@@ -268,6 +267,7 @@ powerline-fonts
 powertop
 print-manager
 procs
+profile-sync-daemon
 protontricks
 pv
 python-aiohttp
@@ -302,7 +302,7 @@ rustup
 scapy
 scrcpy
 scrot
-sddm-git
+sddm
 sddm-kcm
 sed
 shellharden
@@ -316,7 +316,6 @@ sshfs
 steam
 steam-native-runtime
 strace
-streamlink-twitch-gui-git
 stress
 sudo
 svgpart
@@ -334,11 +333,11 @@ texlive-langchinese
 timeshift
 tmux
 topgrade
+trash-cli
 tree
 ttf-hack-nerd
 ttf-jetbrains-mono
 ttf-joypixels
-ttf-wps-fonts
 turbostat
 ueberzugpp
 unarchiver
@@ -356,21 +355,16 @@ vkd3d
 vulkan-radeon
 vulkan-tools
 wasm-pack
-watt-toolkit-bin
 wezterm
 wget
 which
 wine-staging
 wireshark-qt
 wpa_supplicant
-wps-office
-wps-office-fonts
-wps-office-mui-zh-cn
 x11vnc
 xclip
 xdg-desktop-portal
 xdg-desktop-portal-kde
-xf86-input-synaptics
 xf86-video-amdgpu
 xf86-video-vesa
 xorg-bdftopcf
