@@ -2,6 +2,7 @@ bubblejail
 chromium-extension-web-store
 clash-meta-cap-git
 cloudflare-wrangler2
+danmu2ass-git
 distro-grub-themes-arch
 ff2mpv-rust
 java-lombok
