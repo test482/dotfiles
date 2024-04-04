@@ -15,8 +15,8 @@ function assprocess()
 		handle:close()
 		mp.commandv("sub-add", ass_path)
 		-- 把没有 60 fps 的视频的帧率上采样至 60 fps
-		-- https://github.com/THMonster/Revda/wiki/2-%E8%BF%9B%E9%98%B6%E7%94%A8%E6%B3%95#%E5%BD%95%E5%88%B6
-		mp.commandv("set", "vf", "lavfi=\"fps=fps=60:round=down\"")
+		-- https://github.com/THMonster/Revda/wiki/2-进阶用法#录制
+		mp.commandv("set", "vf", 'lavfi="fps=fps=60:round=down"')
 	end
 end
 
