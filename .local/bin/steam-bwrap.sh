@@ -63,7 +63,9 @@ robind \
 
 devbind \
     /dev/dri \
-    /dev/nvidia*
+    /dev/nvidia* \
+    /dev/input \
+    /dev/uinput
 
 # steam
 bind \
