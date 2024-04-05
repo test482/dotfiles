@@ -70,7 +70,6 @@ devbind \
 # steam
 bind \
     "$XAUTHORITY" \
-    "$HOME/.Xauthority" \
     "$HOME/.local/bin/proton" \
     "$HOME/.pki" \
     "$HOME/.steam" \
