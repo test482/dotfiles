@@ -13,18 +13,18 @@ export HISTFILE="$XDG_STATE_HOME"/bash/history
 [[ $- != *i* ]] && return
 
 #alias ls='ls --color=auto'
-[ -f "$HOME"/.config/bash/exa.sh ] && source "$HOME"/.config/bash/exa.sh
+[ -f "$XDG_CONFIG_HOME"/bash/exa.sh ] && source "$XDG_CONFIG_HOME"/bash/exa.sh
 
 # git
-[ -f "$HOME"/.config/bash/git.sh ] && source "$HOME"/.config/bash/git.sh
+[ -f "$XDG_CONFIG_HOME"/bash/git.sh ] && source "$XDG_CONFIG_HOME"/bash/git.sh
 
 # yazi: Blazing fast terminal file manager written in Rust
 # https://yazi-rs.github.io/docs/installation
-[ -f "$HOME"/.config/bash/yazi.sh ] && source "$HOME"/.config/bash/yazi.sh
+[ -f "$XDG_CONFIG_HOME"/bash/yazi.sh ] && source "$XDG_CONFIG_HOME"/bash/yazi.sh
 
 # fzf : A command-line fuzzy finder
 # https://github.com/junegunn/fzf
-[ -f "$HOME"/.config/bash/fzf.sh ] && source "$HOME"/.config/bash/fzf.sh
+[ -f "$XDG_CONFIG_HOME"/bash/fzf.sh ] && source "$XDG_CONFIG_HOME"/bash/fzf.sh
 
 # yarn : A package manager for Node.js
 [ -f "$XDG_CONFIG_HOME/yarn/config" ] && alias yarn='yarn --use-yarnrc "$XDG_CONFIG_HOME/yarn/config"'
@@ -43,10 +43,7 @@ fnm() {
 # Set CLI proxy server
 # https://wiki.archlinux.org/index.php/Proxy_server#Environment_variables
 # also check this repo: (https://github.com/comwrg/FUCK-GFW)
-[ -f "$HOME"/.config/bash/cli-proxy.sh ] && source "$HOME"/.config/bash/cli-proxy.sh
-
-# bash_completion
-[ -r /usr/share/bash-completion/bash_completion ] && source /usr/share/bash-completion/bash_completion
+[ -f "$XDG_CONFIG_HOME"/bash/cli-proxy.sh ] && source "$XDG_CONFIG_HOME"/bash/cli-proxy.sh
 
 alias grep='grep --color'
 alias tree='tree -C'
@@ -66,8 +63,6 @@ alias status="sudo systemctl status"
 
 # Docker command alias
 alias dps='docker container ls --format "table  {{.ID}}\t{{.Image}}\t{{.Status}}\t{{.Names}}"'
-alias dcp="docker-compose"
-alias dimageupdate='docker images --format "{{.Repository}}:{{.Tag}}" | grep ':latest' | xargs -L1 docker pull;'
 
 alias .="source"
 alias cp="cp -i --reflink=auto"
@@ -94,7 +89,7 @@ alias Co="clipboard -o"
 alias Copng="Co -target image/png"
 
 # device specific conf
-[ -f "$HOME"/.config/bash/specific-conf ] && source "$HOME"/.config/bash/specific-conf
+[ -f "$XDG_CONFIG_HOME"/bash/specific-conf ] && source "$XDG_CONFIG_HOME"/bash/specific-conf
 
 # Pacman aliases and functions
 alias Syu="sudo pacman -Syu"
