@@ -4,3 +4,6 @@
 [submodule ".config/nvim"]
 	path = .config/nvim
 	url = https://github.com/test482/nvim.git
+[submodule ".local/share/navi/cheats"]
+	path = .local/share/navi/cheats
+	url = https://github.com/test482/navi-cheats.git
