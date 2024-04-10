@@ -1,6 +1,7 @@
 -- https://wezfurlong.org/wezterm/config/files.html
 
 local wezterm = require 'wezterm'
+local act = wezterm.action
 
 -- The filled in variant of the < symbol
 local SOLID_LEFT_ARROW = utf8.char(0xe0b2)
@@ -51,22 +52,35 @@ wezterm.on("format-tab-title", function(tab, tabs, panes, config, hover, max_wid
 end)
 
 local keys = {
-    { key = '=',          mods = 'LEADER', action = wezterm.action.SplitHorizontal { domain = 'CurrentPaneDomain' } },
-    { key = '-',          mods = 'LEADER', action = wezterm.action.SplitVertical { domain = 'CurrentPaneDomain' } },
-    { key = 'c',          mods = 'LEADER', action = wezterm.action.SpawnTab 'CurrentPaneDomain' },
-    { key = 'LeftArrow',  mods = 'LEADER', action = wezterm.action.ActivatePaneDirection 'Left' },
-    { key = 'RightArrow', mods = 'LEADER', action = wezterm.action.ActivatePaneDirection 'Right' },
-    { key = 'UpArrow',    mods = 'LEADER', action = wezterm.action.ActivatePaneDirection 'Up' },
-    { key = 'DownArrow',  mods = 'LEADER', action = wezterm.action.ActivatePaneDirection 'Down' },
-    { key = 'n',          mods = 'LEADER', action = wezterm.action.ActivateTabRelativeNoWrap(1) },
-    { key = 'p',          mods = 'LEADER', action = wezterm.action.ActivateTabRelativeNoWrap(-1) },
-    { key = 'w',          mods = 'LEADER', action = wezterm.action.CloseCurrentTab { confirm = true } },
+    { key = '%',          mods = 'LEADER|SHIFT', action = act.SplitHorizontal { domain = 'CurrentPaneDomain' } },
+    { key = '"',          mods = 'LEADER|SHIFT', action = act.SplitVertical { domain = 'CurrentPaneDomain' } },
+    { key = '\\',         mods = 'LEADER',       action = act.SplitHorizontal { domain = 'CurrentPaneDomain' } },
+    { key = '-',          mods = 'LEADER',       action = act.SplitVertical { domain = 'CurrentPaneDomain' } },
+    { key = "z",          mods = "LEADER",       action = act.TogglePaneZoomState },
+
+    { key = 'LeftArrow',  mods = 'LEADER',       action = act.ActivatePaneDirection 'Left' },
+    { key = 'RightArrow', mods = 'LEADER',       action = act.ActivatePaneDirection 'Right' },
+    { key = 'UpArrow',    mods = 'LEADER',       action = act.ActivatePaneDirection 'Up' },
+    { key = 'DownArrow',  mods = 'LEADER',       action = act.ActivatePaneDirection 'Down' },
+    { key = "h",          mods = "LEADER",       action = act.ActivatePaneDirection 'Left' },
+    { key = "j",          mods = "LEADER",       action = act.ActivatePaneDirection 'Down' },
+    { key = "k",          mods = "LEADER",       action = act.ActivatePaneDirection 'Up' },
+    { key = "l",          mods = "LEADER",       action = act.ActivatePaneDirection 'Right' },
+
+    { key = 'c',          mods = 'LEADER',       action = act.SpawnTab 'CurrentPaneDomain' },
+    { key = 'n',          mods = 'LEADER',       action = act.ActivateTabRelativeNoWrap(1) },
+    { key = 'p',          mods = 'LEADER',       action = act.ActivateTabRelativeNoWrap(-1) },
+    { key = 'x',          mods = 'LEADER',       action = act.CloseCurrentTab { confirm = true } },
+
+    { key = "[",          mods = "LEADER",       action = act.ActivateCopyMode },
+    { key = "]",          mods = "LEADER",       action = act.PasteFrom("PrimarySelection") },
+
     -- Send 'CTRL-B' to the terminal when pressing CTRL-B, CTRL-B
-    { key = 'b',          mods = 'LEADER', action = wezterm.action.SendString '\x02' },
+    { key = 'b',          mods = 'LEADER',       action = act.SendString '\x02' },
 }
 
 for i = 1, 9 do
-    local tabkey = { key = tostring(i), mods = 'LEADER', action = wezterm.action.ActivateTab(i - 1) }
+    local tabkey = { key = tostring(i), mods = 'LEADER', action = act.ActivateTab(i - 1) }
     table.insert(keys, tabkey)
 end
 
@@ -76,6 +90,78 @@ for i, key in ipairs(keys) do
     table.insert(ctrlkeys, ctrlkey)
     table.insert(ctrlkeys, key)
 end
+
+local key_tables = {
+    copy_mode = {
+        { key = "q",          mods = "NONE",  action = act.CopyMode("Close") },
+        { key = "Escape",     mods = "NONE",  action = act.CopyMode("Close") },
+
+        { key = "h",          mods = "NONE",  action = act.CopyMode("MoveLeft") },
+        { key = "j",          mods = "NONE",  action = act.CopyMode("MoveDown") },
+        { key = "k",          mods = "NONE",  action = act.CopyMode("MoveUp") },
+        { key = "l",          mods = "NONE",  action = act.CopyMode("MoveRight") },
+
+        { key = "LeftArrow",  mods = "NONE",  action = act.CopyMode("MoveLeft") },
+        { key = "DownArrow",  mods = "NONE",  action = act.CopyMode("MoveDown") },
+        { key = "UpArrow",    mods = "NONE",  action = act.CopyMode("MoveUp") },
+        { key = "RightArrow", mods = "NONE",  action = act.CopyMode("MoveRight") },
+
+        { key = "RightArrow", mods = "ALT",   action = act.CopyMode("MoveForwardWord") },
+        { key = "f",          mods = "ALT",   action = act.CopyMode("MoveForwardWord") },
+        { key = "LeftArrow",  mods = "ALT",   action = act.CopyMode("MoveBackwardWord") },
+        { key = "b",          mods = "ALT",   action = act.CopyMode("MoveBackwardWord") },
+
+        { key = "g",          mods = "NONE",  action = act.CopyMode("MoveToViewportTop") },
+        { key = "g",          mods = "SHIFT", action = act.CopyMode("MoveToViewportBottom") },
+
+        { key = "Enter",      mods = "NONE",  action = act.CopyMode("MoveToStartOfNextLine") },
+        { key = "0",          mods = "NONE",  action = act.CopyMode("MoveToStartOfLine") },
+        { key = "Home",       mods = "NONE",  action = act.CopyMode("MoveToStartOfLine") },
+        { key = "End",        mods = "NONE",  action = act.CopyMode("MoveToEndOfLineContent") },
+
+        { key = " ",          mods = "NONE",  action = act.CopyMode { SetSelectionMode = "Cell" } },
+        { key = "v",          mods = "NONE",  action = act.CopyMode { SetSelectionMode = "Cell" } },
+        { key = "v",          mods = "SHIFT", action = act.CopyMode { SetSelectionMode = "Line" } },
+        { key = "v",          mods = "CTRL",  action = act.CopyMode { SetSelectionMode = "Block" } },
+
+        { key = "PageUp",     mods = "NONE",  action = act.CopyMode("PageUp") },
+        { key = "PageDown",   mods = "NONE",  action = act.CopyMode("PageDown") },
+
+        -- Enter y to copy and quit the copy mode.
+        {
+            key = "y",
+            mods = "NONE",
+            action = act.Multiple {
+                act.CopyTo("ClipboardAndPrimarySelection"),
+                act.CopyMode("Close"),
+            }
+        },
+        {
+            key = "c",
+            mods = "CTRL",
+            action = act.Multiple {
+                act.CopyTo("ClipboardAndPrimarySelection"),
+                act.CopyMode("Close"),
+            }
+        },
+        -- Enter search mode to edit the pattern.
+        -- When the search pattern is an empty string the existing pattern is preserved
+        { key = "/", mods = "NONE", action = act { Search = { CaseSensitiveString = "" } } },
+        { key = "?", mods = "NONE", action = act { Search = { CaseInSensitiveString = "" } } },
+        { key = "n", mods = "NONE", action = act { CopyMode = "NextMatch" } },
+        { key = "p", mods = "NONE", action = act { CopyMode = "PriorMatch" } },
+    },
+    search_mode = {
+        -- Go back to copy mode when pressing enter, so that we can use unmodified keys like "n"
+        -- to navigate search results without conflicting with typing into the search area.
+        { key = "Escape",    mods = "NONE", action = act.ActivateCopyMode },
+        { key = "Enter",     mods = "NONE", action = act.ActivateCopyMode },
+        { key = "n",         mods = "CTRL", action = act { CopyMode = "NextMatch" } },
+        { key = "p",         mods = "CTRL", action = act { CopyMode = "PriorMatch" } },
+        { key = "r",         mods = "CTRL", action = act.CopyMode("CycleMatchType") },
+        { key = "Backspace", mods = "CTRL", action = act.CopyMode("ClearPattern") },
+    },
+}
 
 local config = {
     automatically_reload_config = false,
@@ -109,13 +195,14 @@ local config = {
     -- tmux style key binding
     leader = { key = "b", mods = "CTRL", timeout_milliseconds = 1000 },
     keys = ctrlkeys,
+    key_tables = key_tables,
     disable_default_mouse_bindings = false,
     mouse_bindings = {
         {
             -- 左键选中只起到框选作用
             mods = "NONE",
             event = { Up = { streak = 1, button = "Left" } },
-            action = wezterm.action.Nop,
+            action = act.Nop,
         },
         {
             -- 单击右键：如果有选中，则复制；未选中则从剪贴板粘贴
@@ -124,8 +211,8 @@ local config = {
             action = wezterm.action_callback(function(window, pane)
                 local has_selection = window:get_selection_text_for_pane(pane) ~= ""
                 if has_selection then
-                    window:perform_action(wezterm.action.CopyTo("ClipboardAndPrimarySelection"), pane)
-                    window:perform_action(wezterm.action.ClearSelection, pane)
+                    window:perform_action(act.CopyTo("ClipboardAndPrimarySelection"), pane)
+                    window:perform_action(act.ClearSelection, pane)
                 else
                     window:perform_action(wezterm.action({ PasteFrom = "Clipboard" }), pane)
                 end
@@ -135,7 +222,7 @@ local config = {
             -- 按住 Ctrl 时再打开超链接
             mods = 'CTRL',
             event = { Up = { streak = 1, button = 'Left' } },
-            action = wezterm.action.OpenLinkAtMouseCursor,
+            action = act.OpenLinkAtMouseCursor,
         },
     },
 }
