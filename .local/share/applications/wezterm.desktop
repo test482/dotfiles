@@ -1,0 +1,7 @@
+[Desktop Entry]
+Exec=/usr/bin/wezterm start --always-new-process
+Name=/usr/bin/wezterm start --always-new-process
+NoDisplay=true
+StartupNotify=false
+Type=Application
+X-KDE-GlobalAccel-CommandShortcut=true

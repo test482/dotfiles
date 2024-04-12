@@ -1,0 +1,7 @@
+[Desktop Entry]
+Exec=flameshot gui
+Name=flameshot gui
+NoDisplay=true
+StartupNotify=false
+Type=Application
+X-KDE-GlobalAccel-CommandShortcut=true
