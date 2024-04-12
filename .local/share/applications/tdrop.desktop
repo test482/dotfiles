@@ -1,0 +1,7 @@
+[Desktop Entry]
+Exec=tdrop -m -w 100%% -h 45%% -s tdrop alacritty
+Name=tdrop -m -w 100%% -h 45%% -s tdrop alacritty
+NoDisplay=true
+StartupNotify=false
+Type=Application
+X-KDE-GlobalAccel-CommandShortcut=true
