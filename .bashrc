@@ -92,14 +92,26 @@ alias Copng="Co -target image/png"
 [ -f "$XDG_CONFIG_HOME"/bash/specific-conf ] && source "$XDG_CONFIG_HOME"/bash/specific-conf
 
 # Pacman aliases and functions
-alias Syu="sudo pacman -Syu"
+function Syu() {
+    sudo pacman -Syu "$@" && sync --file-system /
+    pacman -Qtdq | ifne sudo pacman -Rcs - && sync --file-system /
+    sudo pacman -Fy && sync --file-system /
+    pacdiff --output
+}
 alias Rcs="sudo pacman -Rcs"
 alias Rs="sudo pacman -Rs"
 alias Ss="pacman -Ss"
 alias Si="pacman -Si"
 alias Sl="pacman -Sl"
 alias Sg="pacman -Sg"
-alias Qs="pacman -Qs"
+alias Sy="sudo pacman -Sy"
+function Qs() {
+    if [ $# -eq 0 ]; then
+        pacman -Qq | fzf --preview 'pacman -Qil {}' | ifne pacman -Qil -
+    else
+        pacman -Qs "$@"
+    fi
+}
 alias Qi="pacman -Qi"
 alias Qo="pacman -Qo"
 alias Ql="pacman -Ql"
@@ -112,7 +124,6 @@ alias Fo="pacman -F"
 alias Fs="pacman -F"
 alias Fl="pacman -Fl"
 alias Fy="sudo pacman -Fy"
-alias Sy="sudo pacman -Sy"
 
 # paru: aur helper
 alias _aur_helper='paru'
