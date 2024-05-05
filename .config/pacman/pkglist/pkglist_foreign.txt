@@ -1,13 +1,10 @@
 bubblejail
 chromium-extension-web-store
 clash-meta-cap-git
-cloudflare-wrangler2
 danmu2ass-git
 distro-grub-themes-arch
 ff2mpv-rust
 java-lombok
-java11-openjfx
-java11-openjfx-doc
 jetbrains-toolbox
 konsave
 linuxqq-nt-bwrap
@@ -16,6 +13,7 @@ lorien-bin
 obs-plugin-input-overlay
 plasma5-applets-todolist
 protonup-qt
+rustdesk-git
 sddm-sugar-candy-git
 streamlink-twitch-gui-git
 systemd-cleanup-pacman-hook
@@ -24,6 +22,7 @@ tmux-bash-completion-git
 ttf-wps-fonts
 typora
 watt-toolkit-bin
+wechat-universal-bwrap
 wps-office
 wps-office-fonts
 wps-office-mui-zh-cn

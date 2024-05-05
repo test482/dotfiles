@@ -75,7 +75,7 @@ flake8
 flameshot
 flex
 fnm
-fprintd
+fprintd-git
 freerdp
 fwupd
 fzf
@@ -168,6 +168,7 @@ lib32-v4l-utils
 lib32-vulkan-radeon
 libdbusmenu-gtk2
 libfprint-git
+libinput-gestures
 libkscreen
 libksysguard
 libraqm
@@ -178,6 +179,8 @@ libvirt
 linux-firmware
 linux-lts
 linux-lts-headers
+linux-next-git
+linux-next-git-headers
 linux-zen
 linux-zen-headers
 luit
@@ -196,13 +199,9 @@ mbedtls2
 mesa-demos
 mesa-vdpau
 milou
-mingw-w64-binutils
-mingw-w64-crt
-mingw-w64-gcc
-mingw-w64-headers
-mingw-w64-winpthreads
 mlocate
 moonlight-qt
+moreutils
 mpv
 navi
 neovim
@@ -295,9 +294,9 @@ realtime-privileges
 redis
 redshift
 remmina
+retroarch
 revda-git
 ripgrep
-rustdesk-git
 rustup
 scapy
 scrcpy
@@ -323,6 +322,7 @@ sweeper
 syncthing
 systemsettings
 tailscale
+tdrop-git
 tealdeer
 teamspeak3
 telegram-desktop
@@ -347,7 +347,6 @@ unzip
 usbutils
 vamp-plugin-sdk
 ventoy-bin
-vhs
 virt-manager
 virt-viewer
 visual-studio-code-bin
@@ -361,6 +360,7 @@ which
 wine-staging
 wireshark-qt
 wpa_supplicant
+wrangler
 x11vnc
 xclip
 xdg-desktop-portal
