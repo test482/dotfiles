@@ -9,6 +9,7 @@
 .dotfiles/
 .git/
 .java/
+.local/share/nvim/
 .local/share/Trash/
 .mozilla/
 .pki/
