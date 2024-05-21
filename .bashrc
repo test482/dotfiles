@@ -127,7 +127,7 @@ alias Fy="sudo pacman -Fy"
 
 # paru: aur helper
 alias _aur_helper='paru'
-alias Syua="_aur_helper -Syu --noconfirm"
+alias Syua="_aur_helper -Syu --aur"
 alias Sya="_aur_helper -Sy --aur"
 alias Ssa="_aur_helper -Ss --aur"
 alias Sia="_aur_helper -Si --aur"
