@@ -9,6 +9,7 @@ android-udev
 arch-install-scripts
 archlinux-keyring
 archlinuxcn-keyring
+archlinuxcn-mirrorlist-git
 aria2-fast
 ark
 aspell
@@ -70,6 +71,7 @@ ffmpeg
 file
 findutils
 firefox
+firefox-i18n-zh-cn
 firewalld
 flake8
 flameshot
@@ -109,7 +111,6 @@ ipset
 iptables
 jdk-openjdk
 jdk11-openjdk
-jdk8-openjdk
 joyutils
 junit
 kactivitymanagerd
@@ -172,6 +173,7 @@ libinput-gestures
 libkscreen
 libksysguard
 libraqm
+libretro-mesen
 libtool
 libva-mesa-driver
 libva-utils
@@ -205,7 +207,6 @@ moreutils
 mpv
 navi
 neovim
-neovim-symlinks
 netctl
 network-manager-applet
 networkmanager
@@ -417,5 +418,6 @@ yazi-git
 yt-dlp
 yubikey-manager
 yubikey-manager-qt
+zerotier-one
 zip
 zoxide

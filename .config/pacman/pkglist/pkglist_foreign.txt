@@ -10,7 +10,7 @@ konsave
 linuxqq-nt-bwrap
 localsend-bin
 lorien-bin
-obs-plugin-input-overlay
+neovim-symlinks
 plasma5-applets-todolist
 protonup-qt
 rustdesk-git
