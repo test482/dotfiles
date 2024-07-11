@@ -3,8 +3,9 @@ chromium-extension-web-store
 clash-meta-cap-git
 danmu2ass-git
 distro-grub-themes-arch
+evremap-git
 ff2mpv-rust
-java-lombok
+gallery-dl
 jetbrains-toolbox
 konsave
 linuxqq-nt-bwrap
@@ -13,15 +14,12 @@ lorien-bin
 neovim-symlinks
 plasma5-applets-todolist
 protonup-qt
-rustdesk-git
 sddm-sugar-candy-git
 streamlink-twitch-gui-git
 systemd-cleanup-pacman-hook
 thinkfan-ui
 tmux-bash-completion-git
 ttf-wps-fonts
-typora
-watt-toolkit-bin
 wechat-universal-bwrap
 wps-office
 wps-office-fonts

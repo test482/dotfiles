@@ -87,6 +87,7 @@ gawk
 gcc
 geoipupdate
 gettext
+ghostwriter
 gimp
 gimp-help-en
 gimp-help-zh_cn
@@ -154,6 +155,7 @@ kwave
 kwayland-integration
 kwin
 kwrited
+lib32-gamemode
 lib32-gst-plugins-base-libs
 lib32-libdbusmenu-glib
 lib32-libdbusmenu-gtk2
@@ -166,6 +168,7 @@ lib32-ocl-icd
 lib32-pipewire-jack
 lib32-pipewire-v4l2
 lib32-v4l-utils
+lib32-vkd3d
 lib32-vulkan-radeon
 libdbusmenu-gtk2
 libfprint-git
@@ -181,14 +184,11 @@ libvirt
 linux-firmware
 linux-lts
 linux-lts-headers
-linux-next-git
-linux-next-git-headers
 linux-zen
 linux-zen-headers
 luit
 lutris-git
 m4
-macchina
 make
 man-db
 man-pages
@@ -240,6 +240,7 @@ papirus-icon-theme
 paru
 patch
 pcsclite
+phonon-qt6-mpv-git
 pipewire-alsa
 pipewire-audio
 pipewire-jack
@@ -259,7 +260,6 @@ plasma-vault
 plasma-workspace
 plasma-workspace-wallpapers
 plasma6-applets-fokus
-plasma6-applets-netspeed
 polkit-kde-agent
 powerdevil
 powerline
@@ -321,6 +321,8 @@ sudo
 svgpart
 sweeper
 syncthing
+system-config-printer
+systemctl-tui
 systemsettings
 tailscale
 tdrop-git
@@ -414,6 +416,7 @@ xorg-xwayland
 xorg-xwd
 xorg-xwininfo
 xorg-xwud
+xungu-git
 yazi-git
 yt-dlp
 yubikey-manager
