@@ -32,6 +32,7 @@ breeze-gtk
 btop
 cargo-generate
 cargo-zigbuild
+chromium
 clash-meta
 clash-verge
 cmake
@@ -81,6 +82,7 @@ fprintd-git
 freerdp
 fwupd
 fzf
+gallery-dl
 gamemode
 gamescope
 gawk
@@ -160,10 +162,8 @@ lib32-gst-plugins-base-libs
 lib32-libdbusmenu-glib
 lib32-libdbusmenu-gtk2
 lib32-libdbusmenu-gtk3
-lib32-libva-mesa-driver
 lib32-libxslt
 lib32-mangohud
-lib32-mesa-vdpau
 lib32-ocl-icd
 lib32-pipewire-jack
 lib32-pipewire-v4l2
@@ -172,13 +172,11 @@ lib32-vkd3d
 lib32-vulkan-radeon
 libdbusmenu-gtk2
 libfprint-git
-libinput-gestures
 libkscreen
 libksysguard
 libraqm
 libretro-mesen
 libtool
-libva-mesa-driver
 libva-utils
 libvirt
 linux-firmware
@@ -199,9 +197,7 @@ mariadb-clients
 mariadb-libs
 mbedtls2
 mesa-demos
-mesa-vdpau
 milou
-mlocate
 moonlight-qt
 moreutils
 mpv
@@ -234,7 +230,6 @@ pacman
 pacman-contrib
 pacman-static
 pacutils
-pacvis-git
 pandoc-bin
 papirus-icon-theme
 paru
@@ -260,6 +255,7 @@ plasma-vault
 plasma-workspace
 plasma-workspace-wallpapers
 plasma6-applets-fokus
+plocate
 polkit-kde-agent
 powerdevil
 powerline
@@ -325,7 +321,6 @@ system-config-printer
 systemctl-tui
 systemsettings
 tailscale
-tdrop-git
 tealdeer
 teamspeak3
 telegram-desktop
@@ -344,7 +339,6 @@ ttf-joypixels
 turbostat
 ueberzugpp
 unarchiver
-ungoogled-chromium
 unrar
 unzip
 usbutils
@@ -368,6 +362,7 @@ x11vnc
 xclip
 xdg-desktop-portal
 xdg-desktop-portal-kde
+xdg-ninja-git
 xf86-video-amdgpu
 xf86-video-vesa
 xorg-bdftopcf
