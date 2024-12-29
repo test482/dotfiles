@@ -1,6 +1,6 @@
-Server = https://mirrors.wsyu.edu.cn/archlinuxcn/$arch
+Server = https://mirrors.bfsu.edu.cn/archlinuxcn/$arch
 
 CacheServer = https://mirrors.bfsu.edu.cn/archlinuxcn/$arch
-CacheServer = https://mirrors.sjtug.sjtu.edu.cn/archlinux-cn/$arch
+CacheServer = https://mirror.sjtu.edu.cn/archlinux-cn/$arch
 CacheServer = https://mirrors.ustc.edu.cn/archlinuxcn/$arch
 CacheServer = https://mirrors.wsyu.edu.cn/archlinuxcn/$arch
