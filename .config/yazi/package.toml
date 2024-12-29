@@ -1,0 +1,12 @@
+[plugin]
+deps = [
+    { use = "yazi-rs/plugins:smart-enter", rev = "71c4fc2" },
+    { use = "yazi-rs/plugins:chmod", rev = "71c4fc2" },
+    { use = "yazi-rs/plugins:diff", rev = "71c4fc2" },
+    { use = "KKV9/compress", rev = "60b24af" },
+]
+
+[flavor]
+deps = [
+    { use = "yazi-rs/flavors:catppuccin-mocha", rev = "fc8eeaa" },
+]

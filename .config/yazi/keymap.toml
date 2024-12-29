@@ -5,17 +5,33 @@
 [manager]
 prepend_keymap = [
     # Q == quick to current path
+    { on = "q", run = "quit --no-cwd-file", desc = "Exit the process without writing cwd-file" },
+    { on = "Q", run = "quit", desc = "Exit the process" },
+
+    # compress
     { on = [
-        "q",
-    ], run = "quit --no-cwd-file", desc = "Exit the process without writing cwd-file" },
+        "<C-p>",
+        "a",
+    ], run = "plugin compress", desc = "Archive selected files" },
+
+    # chmod
     { on = [
-        "Q",
-    ], run = "quit", desc = "Exit the process" },
-    # Smart enter: enter for directory, open for file
+        "c",
+        "m",
+    ], run = "plugin chmod", desc = "Chmod on selected files" },
+
+    # diff
     { on = [
-        "<Enter>",
-    ], run = "plugin --sync smart-enter", desc = "Enter the child directory, or open the file" },
-    { on = [
-        "l",
-    ], run = "plugin --sync smart-enter", desc = "Enter the child directory, or open the file" },
+        "<C-p>",
+        "d",
+    ], run = "plugin diff", desc = "Diff the selected with the hovered file" },
+
+    # smart-enter
+    { on = "<Enter>", run = "plugin smart-enter", desc = "Enter the child directory, or open the file" },
+]
+
+[input]
+prepend_keymap = [
+    # Close input by once Esc press
+    { on = "<Esc>", run = "close", desc = "Cancel input" },
 ]

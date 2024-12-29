@@ -2,34 +2,29 @@
 
 -- Show symlink in status bar
 function Status:name()
-    local h = cx.active.current.hovered
-    if h == nil then
-        return ui.Span("")
-    end
+	local h = self._current.hovered
+	if not h then
+		return ""
+	end
 
-    local linked = ""
+	local linked = ""
     if h.link_to ~= nil then
         linked = " -> " .. tostring(h.link_to)
     end
-    return ui.Span(" " .. h.name .. linked)
+    return ui.Line(" " .. h.name:gsub("\r", "?", 1) .. linked)
 end
 
 -- Show user/group of files in status bar
-function Status:owner()
-    local h = cx.active.current.hovered
-    if h == nil or ya.target_family() ~= "unix" then
-        return ui.Line {}
-    end
+Status:children_add(function()
+	local h = cx.active.current.hovered
+	if h == nil or ya.target_family() ~= "unix" then
+		return ""
+	end
 
-    return ui.Line { ui.Span(ya.user_name(h.cha.uid) or tostring(h.cha.uid)):fg("magenta"), ui.Span(":"),
-        ui.Span(ya.group_name(h.cha.gid) or tostring(h.cha.gid)):fg("magenta"), ui.Span(" ") }
-end
-
-function Status:render(area)
-    self.area = area
-
-    local left = ui.Line { self:mode(), self:size(), self:name() }
-    local right = ui.Line { self:owner(), self:permissions(), self:percentage(), self:position() }
-    return { ui.Paragraph(area, { left }), ui.Paragraph(area, { right }):align(ui.Paragraph.RIGHT),
-        table.unpack(Progress:render(area, right:width())) }
-end
+	return ui.Line {
+		ui.Span(ya.user_name(h.cha.uid) or tostring(h.cha.uid)):fg("magenta"),
+		":",
+		ui.Span(ya.group_name(h.cha.gid) or tostring(h.cha.gid)):fg("magenta"),
+		" ",
+	}
+end, 500, Status.RIGHT)
