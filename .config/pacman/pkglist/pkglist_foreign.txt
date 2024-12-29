@@ -13,7 +13,7 @@ localsend-bin
 lorien-bin
 neovim-symlinks
 nexusmods-app-bin
-pacvis-git
+pandoc-bin
 plasma5-applets-todolist
 protonup-qt
 sddm-sugar-candy-git

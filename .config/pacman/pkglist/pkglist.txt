@@ -3,6 +3,7 @@ acpilight
 adobe-source-code-pro-fonts
 alacritty
 alsa-firmware
+alsa-utils
 amd-ucode
 android-tools
 android-udev
@@ -230,7 +231,7 @@ pacman
 pacman-contrib
 pacman-static
 pacutils
-pandoc-bin
+pacvis-git
 papirus-icon-theme
 paru
 patch
