@@ -1,12 +1,24 @@
-[plugin]
-deps = [
-    { use = "yazi-rs/plugins:smart-enter", rev = "71c4fc2" },
-    { use = "yazi-rs/plugins:chmod", rev = "71c4fc2" },
-    { use = "yazi-rs/plugins:diff", rev = "71c4fc2" },
-    { use = "KKV9/compress", rev = "60b24af" },
-]
+[[plugin.deps]]
+use = "yazi-rs/plugins:smart-enter"
+rev = "6418698"
+hash = "c1a2739e9ef2d837030ccb4267be3ed1"
 
-[flavor]
-deps = [
-    { use = "yazi-rs/flavors:catppuccin-mocha", rev = "fc8eeaa" },
-]
+[[plugin.deps]]
+use = "yazi-rs/plugins:chmod"
+rev = "6418698"
+hash = "4c7e8fd0266eedee7b619d966bd2d025"
+
+[[plugin.deps]]
+use = "yazi-rs/plugins:diff"
+rev = "6418698"
+hash = "284f6694e3b1a4afd686acf1052acd90"
+
+[[plugin.deps]]
+use = "KKV9/compress"
+rev = "60b24af"
+hash = "ee025be766240cc98e671754ac836da3"
+
+[[flavor.deps]]
+use = "yazi-rs/flavors:catppuccin-mocha"
+rev = "78d1d19"
+hash = "407710c2af9621a8351453e637d6c870"
