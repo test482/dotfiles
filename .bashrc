@@ -61,6 +61,11 @@ alias stop="sudo systemctl stop"
 alias restart="sudo systemctl restart"
 alias status="sudo systemctl status"
 
+alias ustart="systemctl --user start"
+alias ustop="systemctl --user stop"
+alias urestart="systemctl --user restart"
+alias ustatus="systemctl --user status"
+
 # Docker command alias
 alias dps='docker container ls --format "table  {{.ID}}\t{{.Image}}\t{{.Status}}\t{{.Names}}"'
 
