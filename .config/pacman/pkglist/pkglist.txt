@@ -45,8 +45,6 @@ dhcpcd
 dialog
 dmidecode
 dnsmasq
-docker
-docker-compose
 dolphin
 dos2unix
 downgrade
@@ -257,6 +255,9 @@ plasma-workspace
 plasma-workspace-wallpapers
 plasma6-applets-fokus
 plocate
+podman
+podman-compose
+podman-docker
 polkit-kde-agent
 powerdevil
 powerline
@@ -265,6 +266,7 @@ powertop
 print-manager
 procs
 profile-sync-daemon
+proton-ge-custom-bin
 protontricks
 pv
 python-aiohttp
