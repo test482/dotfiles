@@ -112,7 +112,7 @@ alias Sg="pacman -Sg"
 alias Sy="sudo pacman -Sy"
 function Qs() {
     if [ $# -eq 0 ]; then
-        pacman -Qq | fzf --preview 'pacman -Qil {}' | ifne pacman -Qil -
+        pacman -Qq | fzf --preview 'pacman -Qil {}' | ifne sh -c 'pacman -Qil - | view'
     else
         pacman -Qs "$@"
     fi
