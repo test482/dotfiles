@@ -2,6 +2,7 @@
 run_in_tmux = true
 no_self_update = true
 skip_notify = true
+disable = ["containers"]
 
 [git]
 pull_predefined = false
