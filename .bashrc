@@ -30,9 +30,9 @@ export HISTFILE="$XDG_STATE_HOME"/bash/history
 [ -f "$XDG_CONFIG_HOME/yarn/config" ] && alias yarn='yarn --use-yarnrc "$XDG_CONFIG_HOME/yarn/config"'
 
 # fnm : Fast Node Manager
-#command -v "fnm" >/dev/null 2>&1 && eval "$(fnm env --use-on-cd)"
+#command -v "fnm" >/dev/null 2>&1 && eval "$(/usr/bin/fnm env --use-on-cd --shell bash)"
 fnm() {
-    eval "$(/usr/bin/fnm env --use-on-cd)"
+    [[ "${PATH}" =~ "fnm" ]] || eval "$(/usr/bin/fnm env --use-on-cd --shell bash)"
 
     /usr/bin/fnm "$@"
 }
