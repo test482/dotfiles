@@ -31,6 +31,7 @@ bluez-utils
 breeze
 breeze-gtk
 btop
+bubblewrap
 cargo-generate
 cargo-zigbuild
 chromium
@@ -93,6 +94,7 @@ gimp
 gimp-help-en
 gimp-help-zh_cn
 git
+git-lfs
 gitui
 glow
 gnome-keyring
@@ -230,6 +232,7 @@ pacman-contrib
 pacman-static
 pacutils
 pacvis-git
+pandoc-bin
 papirus-icon-theme
 paru
 patch
@@ -259,6 +262,7 @@ podman
 podman-compose
 podman-docker
 polkit-kde-agent
+postgresql
 powerdevil
 powerline
 powerline-fonts
@@ -341,6 +345,7 @@ ttf-jetbrains-mono
 ttf-joypixels
 turbostat
 ueberzugpp
+umu-launcher
 unarchiver
 unrar
 unzip

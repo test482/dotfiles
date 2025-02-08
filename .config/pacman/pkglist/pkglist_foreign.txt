@@ -4,6 +4,7 @@ danmu2ass-git
 distro-grub-themes-arch
 evremap-git
 ff2mpv-rust
+game-devices-udev
 hydra-launcher-bin
 jetbrains-toolbox
 konsave
@@ -13,11 +14,12 @@ localsend-bin
 lorien-bin
 neovim-symlinks
 nexusmods-app-bin
-pandoc-bin
+pgvector
 plasma5-applets-todolist
 protonup-qt
 sddm-sugar-candy-git
 simple-live-app-bin
+sql-studio-bin
 streamlink-twitch-gui-git
 systemd-cleanup-pacman-hook
 tdrop-git
