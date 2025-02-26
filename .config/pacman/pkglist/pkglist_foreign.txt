@@ -12,6 +12,7 @@ libinput-gestures
 linuxqq-nt-bwrap
 localsend-bin
 lorien-bin
+mpv-sponsorblock-minimal-git
 neovim-symlinks
 nexusmods-app-bin
 pgvector
