@@ -3,7 +3,12 @@
     email = eliotjoking@gmail.com
 [core]
     autocrlf = input
-    editor = vim
+[column]
+    ui = auto
+[branch]
+    sort = -committerdate # sort branches by last commit date
+[tag]
+    sort = -version:refname # tag names are treated as versions
 [init]
     defaultBranch = master
 [color]
@@ -22,3 +27,14 @@
     undo = reset HEAD^
 [log]
     date = iso
+[diff]
+	algorithm = histogram
+	colorMoved = plain
+	mnemonicPrefix = true
+[push]
+	autoSetupRemote = true
+	followTags = true
+[fetch]
+	prune = true
+	pruneTags = true
+	all = true
