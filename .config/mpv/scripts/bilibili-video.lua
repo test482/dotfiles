@@ -1,12 +1,13 @@
 local utils = require("mp.utils")
 
-function is_bilibili(url)
-	return string.match(url, "bilibili%.com")
+function is_bilibili_video(url)
+	-- avoid live.bilibili.com
+	return string.match(url, "^https://www%.bilibili%.com/") or string.match(url, "^https://bilibili%.com/")
 end
 
 function assprocess()
 	local url = mp.get_property("path")
-	if is_bilibili(url) then
+	if is_bilibili_video(url) then
 		local ass_path = "/tmp/bilibili.ass"
 		-- https://github.com/gwy15/danmu2ass
 		local command = "danmu2ass --no-web " .. url .. " -o " .. ass_path
