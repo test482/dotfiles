@@ -22,6 +22,7 @@
 !/wezterm/
 !/yarn/
 !/yazi/
+!/yt-dlp/
 !chromium-flags.conf
 !user-dirs.dirs
 !user-dirs.locale
