@@ -1,10 +1,5 @@
-!colors.py
 !converttoMP4.sh
 !dot-init-xdg.sh
-!gh-check
-!pacnewdiff
 !pull-github-keys.sh
 !steam-bwrap.sh
-!tcping.py
 !touchpadtoggle.sh
-!yt-dlp-wrapper
