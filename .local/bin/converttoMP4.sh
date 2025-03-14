@@ -5,7 +5,7 @@ notify_args=(
     --icon="ffmpeg"
 )
 
-for input_file in $@; do
+for input_file in "$@"; do
     # /video/foo.mkv
     base_name=$(basename "$input_file" | cut -d. -f1) # foo
     input_dir=$(dirname "$input_file")                # /video
