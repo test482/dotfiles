@@ -2,12 +2,15 @@
 # ~/.bashrc
 #
 
+export HISTFILESIZE=5000
+export HISTSIZE=5000
+export HISTFILE="$XDG_STATE_HOME"/bash/history
+shopt -s histappend
+
 # PATH
 if [[ ! "${PATH}" =~ "${USER}" ]]; then
-    export $(/usr/lib/systemd/user-environment-generators/30-systemd-environment-d-generator)
+  export $(/usr/lib/systemd/user-environment-generators/30-systemd-environment-d-generator)
 fi
-
-export HISTFILE="$XDG_STATE_HOME"/bash/history
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
@@ -32,9 +35,9 @@ export HISTFILE="$XDG_STATE_HOME"/bash/history
 # fnm : Fast Node Manager
 #command -v "fnm" >/dev/null 2>&1 && eval "$(/usr/bin/fnm env --use-on-cd --shell bash)"
 fnm() {
-    [[ "${PATH}" =~ "fnm" ]] || eval "$(/usr/bin/fnm env --use-on-cd --shell bash)"
+  [[ "${PATH}" =~ "fnm" ]] || eval "$(/usr/bin/fnm env --use-on-cd --shell bash)"
 
-    /usr/bin/fnm "$@"
+  /usr/bin/fnm "$@"
 }
 
 # adb
@@ -98,10 +101,10 @@ alias Copng="Co -target image/png"
 
 # Pacman aliases and functions
 function Syu() {
-    sudo pacman -Syu "$@" && sync --file-system /
-    pacman -Qtdq | ifne sudo pacman -Rcs - && sync --file-system /
-    sudo pacman -Fy && sync --file-system /
-    pacdiff --output
+  sudo pacman -Syu "$@" && sync --file-system /
+  pacman -Qtdq | ifne sudo pacman -Rcs - && sync --file-system /
+  sudo pacman -Fy && sync --file-system /
+  pacdiff --output
 }
 alias Rcs="sudo pacman -Rcs"
 alias Rs="sudo pacman -Rs"
@@ -111,11 +114,11 @@ alias Sl="pacman -Sl"
 alias Sg="pacman -Sg"
 alias Sy="sudo pacman -Sy"
 function Qs() {
-    if [ $# -eq 0 ]; then
-        pacman -Qq | fzf --preview 'pacman -Qil {}' | ifne sh -c 'pacman -Qil - | view'
-    else
-        pacman -Qs "$@"
-    fi
+  if [ $# -eq 0 ]; then
+    pacman -Qq | fzf --preview 'pacman -Qil {}' | ifne sh -c 'pacman -Qil - | view'
+  else
+    pacman -Qs "$@"
+  fi
 }
 alias Qi="pacman -Qi"
 alias Qo="pacman -Qo"
@@ -138,15 +141,15 @@ alias Ssa="_aur_helper -Ss --aur"
 alias Sia="_aur_helper -Si --aur"
 
 man() {
-    env \
-        LESS_TERMCAP_mb=$(printf "\e[1;37m") \
-        LESS_TERMCAP_md=$(printf "\e[1;37m") \
-        LESS_TERMCAP_me=$(printf "\e[0m") \
-        LESS_TERMCAP_se=$(printf "\e[0m") \
-        LESS_TERMCAP_so=$(printf "\e[1;47;30m") \
-        LESS_TERMCAP_ue=$(printf "\e[0m") \
-        LESS_TERMCAP_us=$(printf "\e[0;36m") \
-        man "$@"
+  env \
+    LESS_TERMCAP_mb=$(printf "\e[1;37m") \
+    LESS_TERMCAP_md=$(printf "\e[1;37m") \
+    LESS_TERMCAP_me=$(printf "\e[0m") \
+    LESS_TERMCAP_se=$(printf "\e[0m") \
+    LESS_TERMCAP_so=$(printf "\e[1;47;30m") \
+    LESS_TERMCAP_ue=$(printf "\e[0m") \
+    LESS_TERMCAP_us=$(printf "\e[0;36m") \
+    man "$@"
 }
 alias cman="env LANG=zh_CN.UTF-8 man"
 
