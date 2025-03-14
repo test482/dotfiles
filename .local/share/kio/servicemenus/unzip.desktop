@@ -1,0 +1,15 @@
+[Desktop Entry]
+Type=Service
+MimeType=application/zip;application/x-zip-compressed;
+Actions=unzipsjis;unzipgbk;
+X-KDE-Submenu=Unzip as ...
+
+[Desktop Action unzipsjis]
+Name=Unzip here as Shift JIS
+Icon=application-zip
+Exec="unzip" "-O" "sjis" "%U"
+
+[Desktop Action unzipgbk]
+Name=Unzip here as GBK
+Icon=application-zip
+Exec="unzip" "-O" "gb18030" "%U"
