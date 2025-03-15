@@ -7,7 +7,7 @@ MimeType=video/*;
 Actions=converttoMP4;
 
 [Desktop Action converttoMP4]
-Exec="$HOME/.local/bin/converttoMP4.sh" "%U"
+Exec="$HOME/.local/bin/converttoMP4.sh" %U
 Icon=ffmpeg
 Name[zh_CN]=转换为 MP4 格式
 Name=ffmpeg to MP4 format
