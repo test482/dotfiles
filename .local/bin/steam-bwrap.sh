@@ -59,7 +59,9 @@ robind \
     /var/empty \
     /var/lib/alsa \
     /var/lib/dbus \
-    "$RUN_USER/systemd/resolve"
+    "$RUN_USER/systemd/resolve" \
+    /tmp/.ICE-unix/* \
+    /tmp/.X11-unix/*
 
 devbind \
     /dev/dri \
@@ -93,8 +95,6 @@ bind \
     "$XDG_DATA_HOME" \
     "$XDG_STATE_HOME" \
     "/var/lib/bluetooth" \
-    /run/systemd \
-    /tmp/.ICE-unix \
-    /tmp/.X11-unix
+    /run/systemd
 
 exec bwrap "${args[@]}" /usr/lib/steam/steam "$@"
