@@ -9,14 +9,15 @@ hydra-launcher-bin
 jetbrains-toolbox
 konsave
 libinput-gestures
-linuxqq-nt-bwrap
 localsend-bin
 lorien-bin
-mpv-sponsorblock-minimal-git
+mpv-bilibili-sponsorblock
+mpv-sponsorblock
 neovim-symlinks
 nexusmods-app-bin
 pgvector
 plasma5-applets-todolist
+plasma6-applets-resources-monitor
 protonup-qt
 sddm-sugar-candy-git
 simple-live-app-bin
@@ -26,6 +27,7 @@ systemd-cleanup-pacman-hook
 tdrop-git
 thinkfan-ui
 tmux-bash-completion-git
+ttf-joypixels
 ttf-wps-fonts
 wechat-universal-bwrap
 wps-office

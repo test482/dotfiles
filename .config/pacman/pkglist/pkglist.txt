@@ -1,10 +1,10 @@
 acpi
-acpilight
 adobe-source-code-pro-fonts
 alacritty
 alsa-firmware
 alsa-utils
 amd-ucode
+amdgpu_top
 android-tools
 android-udev
 arch-install-scripts
@@ -28,15 +28,16 @@ bison
 bitwarden
 bluedevil
 bluez-utils
+bore
 breeze
 breeze-gtk
 btop
 bubblewrap
 cargo-generate
+cargo-tauri
 cargo-zigbuild
 chromium
 clash-meta
-clash-verge
 cmake
 cowsay
 cpupower
@@ -78,7 +79,7 @@ flake8
 flameshot
 flex
 fnm
-fprintd-git
+fprintd
 freerdp
 fwupd
 fzf
@@ -94,11 +95,13 @@ gimp
 gimp-help-en
 gimp-help-zh_cn
 git
+git-cliff
 git-lfs
 gitui
 glow
 gnome-keyring
 go
+go-musicfox-git
 gparted
 grep
 groff
@@ -172,7 +175,7 @@ lib32-v4l-utils
 lib32-vkd3d
 lib32-vulkan-radeon
 libdbusmenu-gtk2
-libfprint-git
+libfprint
 libkscreen
 libksysguard
 libraqm
@@ -202,6 +205,9 @@ milou
 moonlight-qt
 moreutils
 mpv
+mpv-osc-thumbfast-git
+mpv-osc-uosc
+namcap
 navi
 neovim
 netctl
@@ -237,6 +243,7 @@ papirus-icon-theme
 paru
 patch
 pcsclite
+phonon-qt5-mpv-git
 phonon-qt6-mpv-git
 pipewire-alsa
 pipewire-audio
@@ -257,6 +264,7 @@ plasma-vault
 plasma-workspace
 plasma-workspace-wallpapers
 plasma6-applets-fokus
+plasma6-applets-netspeed
 plocate
 podman
 podman-compose
@@ -342,7 +350,6 @@ trash-cli
 tree
 ttf-hack-nerd
 ttf-jetbrains-mono
-ttf-joypixels
 turbostat
 ueberzugpp
 umu-launcher
@@ -350,6 +357,7 @@ unarchiver
 unrar
 unzip
 usbutils
+uv
 vamp-plugin-sdk
 ventoy-bin
 virt-manager
@@ -359,10 +367,11 @@ vkd3d
 vulkan-radeon
 vulkan-tools
 wasm-pack
+wemeet-bin
 wezterm
 wget
 which
-wine-staging
+wine-staging-wow64
 wireshark-qt
 wpa_supplicant
 wrangler
@@ -397,6 +406,7 @@ xorg-xcursorgen
 xorg-xdpyinfo
 xorg-xdriinfo
 xorg-xev
+xorg-xeyes
 xorg-xgamma
 xorg-xhost
 xorg-xinput
@@ -420,7 +430,9 @@ xorg-xwd
 xorg-xwininfo
 xorg-xwud
 xungu-git
+yacd-meta
 yazi-git
+ydcv-rs-git
 yt-dlp
 yubikey-manager
 yubikey-manager-qt
