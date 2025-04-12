@@ -177,15 +177,15 @@ local config = {
     use_fancy_tab_bar = false, -- 经典tab栏（矮小一些）
 
     -- font
-    font_size = 12.0,
+    font_size = 14.0,
     font = wezterm.font_with_fallback {
         'Hack Nerd Font Mono',
         'Noto Sans CJK SC'
     },
 
     -- width & height
-    initial_cols = 96,
-    initial_rows = 32,
+    initial_cols = 108,
+    initial_rows = 36,
 
     -- cursors
     default_cursor_style = "BlinkingBar",
