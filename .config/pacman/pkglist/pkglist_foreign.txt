@@ -8,6 +8,7 @@ game-devices-udev
 hydra-launcher-bin
 jetbrains-toolbox
 konsave
+lib32-obs-vkcapture
 libinput-gestures
 localsend-bin
 lorien-bin
@@ -15,9 +16,9 @@ mpv-bilibili-sponsorblock
 mpv-sponsorblock
 neovim-symlinks
 nexusmods-app-bin
+obs-vkcapture
 pgvector
 plasma5-applets-todolist
-plasma6-applets-resources-monitor
 protonup-qt
 sddm-sugar-candy-git
 simple-live-app-bin

@@ -75,7 +75,6 @@ findutils
 firefox
 firefox-i18n-zh-cn
 firewalld
-flake8
 flameshot
 flex
 fnm
@@ -112,6 +111,7 @@ heroic-games-launcher-bin
 htop
 imagemagick
 inetutils
+inxi
 ioping
 iperf3
 ipset
@@ -161,6 +161,7 @@ kwave
 kwayland-integration
 kwin
 kwrited
+lact
 lib32-gamemode
 lib32-gst-plugins-base-libs
 lib32-libdbusmenu-glib
@@ -228,7 +229,7 @@ obs-studio
 ocl-icd
 okular
 onedrive-abraunegg
-opencl-rusticl-mesa
+opencl-mesa
 openssh
 os-prober
 oxygen
@@ -238,7 +239,6 @@ pacman-contrib
 pacman-static
 pacutils
 pacvis-git
-pandoc-bin
 papirus-icon-theme
 paru
 patch
@@ -263,8 +263,10 @@ plasma-thunderbolt
 plasma-vault
 plasma-workspace
 plasma-workspace-wallpapers
+plasma-x11-session
 plasma6-applets-fokus
 plasma6-applets-netspeed
+plasma6-applets-resources-monitor
 plocate
 podman
 podman-compose
@@ -283,7 +285,7 @@ protontricks
 pv
 python-aiohttp
 python-chardet
-python-future
+python-flake8
 python-jsbeautifier
 python-jsmin
 python-jsonrpclib-pelix
@@ -303,7 +305,6 @@ qt5-base
 radeontop
 read-edid
 realtime-privileges
-redis
 redshift
 remmina
 retroarch
@@ -341,8 +342,6 @@ teamspeak3
 telegram-desktop
 terminus-font
 texinfo
-texlive-basic
-texlive-langchinese
 timeshift
 tmux
 topgrade
@@ -350,6 +349,7 @@ trash-cli
 tree
 ttf-hack-nerd
 ttf-jetbrains-mono
+ttf-lxgw-wenkai
 turbostat
 ueberzugpp
 umu-launcher
@@ -358,6 +358,7 @@ unrar
 unzip
 usbutils
 uv
+valkey
 vamp-plugin-sdk
 ventoy-bin
 virt-manager
@@ -368,7 +369,7 @@ vulkan-radeon
 vulkan-tools
 wasm-pack
 wemeet-bin
-wezterm
+wezterm-git
 wget
 which
 wine-staging-wow64
@@ -435,7 +436,6 @@ yazi-git
 ydcv-rs-git
 yt-dlp
 yubikey-manager
-yubikey-manager-qt
 zerotier-one
 zip
 zoxide
