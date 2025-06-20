@@ -1,24 +1,24 @@
 [[plugin.deps]]
 use = "yazi-rs/plugins:smart-enter"
-rev = "9a09505"
-hash = "7918aab6a71caf31b58411f789195677"
+rev = "86d28e4"
+hash = "56fdabc96fc1f4d53c96eb884b02a5be"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:chmod"
-rev = "9a09505"
-hash = "2f1053f89d1a301a648ab181d0948e38"
+rev = "86d28e4"
+hash = "a030fe48d91b04341ad2fba9be957df"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:diff"
-rev = "9a09505"
-hash = "7a08e303167d5b655c06da6d570f0333"
+rev = "86d28e4"
+hash = "47865a70cade14a0b9b6bc6a54f16bdb"
 
 [[plugin.deps]]
 use = "test482/compress"
-rev = "1ff74d6"
-hash = "4e3514579b1183e160cb4770d388850d"
+rev = "373105f"
+hash = "54725b824738dae2d1aecffd4aa4d0ec"
 
 [[flavor.deps]]
 use = "yazi-rs/flavors:catppuccin-mocha"
-rev = "68326b4"
-hash = "2ac87e1b3a61f5887472899e86535d29"
+rev = "d04a298"
+hash = "288a0dedd5d13b28605cf82c05326dcd"
