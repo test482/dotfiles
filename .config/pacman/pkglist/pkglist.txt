@@ -184,7 +184,10 @@ libretro-mesen
 libtool
 libva-utils
 libvirt
-linux-firmware
+linux-firmware-amdgpu
+linux-firmware-intel
+linux-firmware-other
+linux-firmware-realtek
 linux-lts
 linux-lts-headers
 linux-zen
