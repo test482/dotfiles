@@ -157,4 +157,5 @@ alias cman="env LANG=zh_CN.UTF-8 man"
 PS1='\[\033]0;\w\007\]\n\[\033[32m\]\D{%R} \u@\[\033[35m\]\h \[\033[33m\]\w\[\033[36m\]\[\033[0m\]\n$ ' # Git Bash for Windows style
 
 # zoxide : A smarter cd command.
-command -v "zoxide" >/dev/null 2>&1 && eval "$(zoxide init bash)"
+export _ZO_EXCLUDE_DIRS="$HOME:/mnt/*:/tmp/*:/run/*"
+command -v "zoxide" >/dev/null 2>&1 && eval "$(zoxide init bash --cmd cd)"
