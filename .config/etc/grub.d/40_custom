@@ -12,5 +12,5 @@ menuentry '[loopback] ArchLinux CustomISO - Jerry' {
     set imgdevpath="/dev/disk/by-uuid/$uuid"
     loopback loop ($isopart)$isofile
     linux (loop)/arch/boot/x86_64/vmlinuz-linux img_dev=$imgdevpath img_loop=$isofile earlymodules=loop
-    initrd (loop)/arch/boot/intel-ucode.img (loop)/arch/boot/amd-ucode.img (loop)/arch/boot/x86_64/initramfs-linux.img
+    initrd (loop)/arch/boot/x86_64/initramfs-linux.img
 }
