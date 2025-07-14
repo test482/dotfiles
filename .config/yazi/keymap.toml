@@ -12,7 +12,7 @@ prepend_keymap = [
     { on = [
         "<C-p>",
         "a",
-    ], run = "plugin compress", desc = "Archive selected files" },
+    ], run = "plugin ouch", desc = "Archive selected files" },
 
     # chmod
     { on = [
