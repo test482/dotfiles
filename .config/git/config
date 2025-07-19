@@ -3,6 +3,7 @@
     email = eliotjoking@gmail.com
 [core]
     autocrlf = input
+    pager = delta
 [column]
     ui = auto
 [branch]
@@ -28,13 +29,22 @@
 [log]
     date = iso
 [diff]
-	algorithm = histogram
-	colorMoved = plain
-	mnemonicPrefix = true
+    algorithm = histogram
+    colorMoved = plain
+    mnemonicPrefix = true
 [push]
-	autoSetupRemote = true
-	followTags = true
+    autoSetupRemote = true
+    followTags = true
 [fetch]
-	prune = true
-	pruneTags = true
-	all = true
+    prune = true
+    pruneTags = true
+    all = true
+[interactive]
+    diffFilter = delta --color-only
+[delta]
+    navigate = true
+    side-by-side = true
+[merge]
+    conflictStyle = zdiff3
+
+# vim: ts=4 sw=4 expandtab
