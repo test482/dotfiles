@@ -3,7 +3,6 @@
     email = eliotjoking@gmail.com
 [core]
     autocrlf = input
-    pager = delta
 [column]
     ui = auto
 [branch]
@@ -22,6 +21,7 @@
     br = branch
     cm = commit
     co = checkout
+    df = -c diff.external=difft diff # Difftastic is a structural diff tool that compares files based on their syntax.
     last = log -1 --stat
     lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cd) %C(bold blue)<%an>%Creset' --abbrev-commit
     st = status
@@ -39,12 +39,5 @@
     prune = true
     pruneTags = true
     all = true
-[interactive]
-    diffFilter = delta --color-only
-[delta]
-    navigate = true
-    side-by-side = true
-[merge]
-    conflictStyle = zdiff3
 
 # vim: ts=4 sw=4 expandtab
