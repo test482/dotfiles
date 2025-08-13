@@ -4,7 +4,6 @@
 
 export HISTFILESIZE=5000
 export HISTSIZE=5000
-export HISTFILE="$XDG_STATE_HOME"/bash/history
 shopt -s histappend
 
 # PATH
