@@ -126,11 +126,11 @@ alias Qlp="pacman -Qlp"
 alias Qm="pacman -Qm"
 alias Qn="pacman -Qn"
 alias U="sudo pacman -U"
-alias F="pacman -F"
-alias Fo="pacman -F"
-alias Fs="pacman -F"
-alias Fl="pacman -Fl"
-alias Fy="sudo pacman -Fy"
+# pacfiles: A pacman -F alternative that runs blazingly fast
+alias F="pacfiles -F"
+alias Fo="pacfiles -F"
+alias Fl="pacfiles -Fl"
+alias Fy="sudo pacfiles -Fy"
 
 # paru: aur helper
 alias _aur_helper='paru'
