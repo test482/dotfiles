@@ -95,9 +95,6 @@ alias Ci="clipboard -i"
 alias Co="clipboard -o"
 alias Copng="Co -target image/png"
 
-# device specific conf
-[ -f "$XDG_CONFIG_HOME"/bash/specific-conf ] && source "$XDG_CONFIG_HOME"/bash/specific-conf
-
 # Pacman aliases and functions
 function Syu() {
   sudo pacman -Syu "$@" && sync --file-system /
@@ -158,3 +155,6 @@ PS1='\[\033]0;\w\007\]\n\[\033[32m\]\D{%R} \u@\[\033[35m\]\h \[\033[33m\]\w\[\03
 # zoxide : A smarter cd command.
 export _ZO_EXCLUDE_DIRS="$HOME:/mnt/*:/tmp/*:/run/*"
 command -v "zoxide" >/dev/null 2>&1 && eval "$(zoxide init bash --cmd cd)"
+
+# device specific conf
+[ -f "$XDG_CONFIG_HOME"/bash/specific-conf ] && source "$XDG_CONFIG_HOME"/bash/specific-conf
