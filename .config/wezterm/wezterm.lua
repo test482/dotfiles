@@ -68,8 +68,8 @@ local keys = {
     { key = "l",          mods = "LEADER",       action = act.ActivatePaneDirection 'Right' },
 
     { key = 'c',          mods = 'LEADER',       action = act.SpawnTab 'CurrentPaneDomain' },
-    { key = 'n',          mods = 'LEADER',       action = act.ActivateTabRelativeNoWrap(1) },
-    { key = 'p',          mods = 'LEADER',       action = act.ActivateTabRelativeNoWrap(-1) },
+    { key = 'n',          mods = 'LEADER',       action = act.ActivateTabRelative(1) },
+    { key = 'p',          mods = 'LEADER',       action = act.ActivateTabRelative(-1) },
     { key = 'x',          mods = 'LEADER',       action = act.CloseCurrentTab { confirm = true } },
 
     { key = "[",          mods = "LEADER",       action = act.ActivateCopyMode },
