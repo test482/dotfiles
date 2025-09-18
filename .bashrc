@@ -98,8 +98,8 @@ alias Copng="Co -target image/png"
 # Pacman aliases and functions
 function Syu() {
   sudo pacman -Syu "$@" && sync --file-system /
-  pacman -Qtdq | ifne sudo pacman -Rcs - && sync --file-system /
-  sudo pacman -Fy && sync --file-system /
+  pacman -Qtdq | ifne sudo pacman -Rs - && sync --file-system /
+  sudo pacfiles -Fy && sync --file-system /
   pacdiff --output
 }
 alias Rcs="sudo pacman -Rcs"
