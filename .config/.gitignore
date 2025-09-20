@@ -24,5 +24,7 @@
 !/yazi/
 !/yt-dlp/
 !chromium-flags.conf
+!code-flags.conf
+!electron-flags.conf
 !user-dirs.dirs
 !user-dirs.locale
