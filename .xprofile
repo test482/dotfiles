@@ -1,3 +1,5 @@
-# fcitx5 Xorg only
+# https://fcitx-im.org/wiki/Using_Fcitx_5_on_Wayland/zh-cn#KDE_Plasma
+# Do not set GTK_IM_MODULE & QT_IM_MODULE & SDL_IM_MODULE on Wayland
 export GTK_IM_MODULE=fcitx
 export QT_IM_MODULE=fcitx
+export SDL_IM_MODULE=fcitx
