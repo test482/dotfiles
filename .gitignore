@@ -6,6 +6,7 @@
 !.gitignore
 !.gitkeep
 !.gitmodules
+!.xprofile
 !README.md
 
 # top level dirs
