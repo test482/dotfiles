@@ -52,7 +52,7 @@ function bilibili_video_assprocess()
 		end
 
 		-- danmu2ass 1.0.1 only support bv url, av url will return (-400) request error
-		local video_id = string.match(video_url, "video/([bB][vV][%a%d]+)")
+		local video_id = string.match(video_url, "video/([bB][vV]%w+)")
 		if not video_id then
 			return
 		end
