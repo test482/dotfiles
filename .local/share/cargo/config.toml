@@ -10,16 +10,13 @@ t = "test"
 color = 'auto'
 
 [source.crates-io]
-replace-with = 'rsproxy-sparse'
+replace-with = 'bfsu'
 
-[source.rsproxy]
-registry = "https://rsproxy.cn/crates.io-index"
+[source.bfsu]
+registry = "sparse+https://mirrors.bfsu.edu.cn/crates.io-index/"
 
-[source.rsproxy-sparse]
-registry = "sparse+https://rsproxy.cn/index/"
-
-[registries.rsproxy]
-index = "https://rsproxy.cn/crates.io-index"
+[registries.bfsu]
+index = "sparse+https://mirrors.bfsu.edu.cn/crates.io-index/"
 
 [net]
 git-fetch-with-cli = true
