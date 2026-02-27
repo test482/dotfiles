@@ -7,9 +7,9 @@ export HISTSIZE=5000
 shopt -s histappend
 
 # PATH
-if [[ ! "${PATH}" =~ "${USER}" ]]; then
-  export $(/usr/lib/systemd/user-environment-generators/30-systemd-environment-d-generator)
-fi
+set -o allexport
+source <(/usr/lib/systemd/user-environment-generators/30-systemd-environment-d-generator)
+set +o allexport
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
