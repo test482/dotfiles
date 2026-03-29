@@ -28,21 +28,21 @@ set +o allexport
 # https://github.com/junegunn/fzf
 [ -f "$XDG_CONFIG_HOME"/bash/fzf.sh ] && source "$XDG_CONFIG_HOME"/bash/fzf.sh
 
-# yarn : A package manager for Node.js
-[ -f "$XDG_CONFIG_HOME/yarn/config" ] && alias yarn='yarn --use-yarnrc "$XDG_CONFIG_HOME/yarn/config"'
-
 # fnm : Fast Node Manager
-#command -v "fnm" >/dev/null 2>&1 && eval "$(/usr/bin/fnm env --use-on-cd --shell bash)"
 fnm() {
-  [[ "${PATH}" =~ "fnm" ]] || eval "$(/usr/bin/fnm env --use-on-cd --shell bash)"
+  [[ "${PATH}" =~ "fnm" ]] || eval "$(command fnm env --use-on-cd --shell bash)"
 
-  /usr/bin/fnm "$@"
+  command fnm "$@"
 }
 
 # Set CLI proxy server
 # https://wiki.archlinux.org/index.php/Proxy_server#Environment_variables
 # also check this repo: (https://github.com/comwrg/FUCK-GFW)
 [ -f "$XDG_CONFIG_HOME"/bash/cli-proxy.sh ] && source "$XDG_CONFIG_HOME"/bash/cli-proxy.sh
+
+# XDG directory fix alias
+[ -f "$XDG_CONFIG_HOME/maven/settings.xml" ] && alias mvn='mvn -gs "$XDG_CONFIG_HOME/maven/settings.xml"'
+[ -f "$XDG_CONFIG_HOME/yarn/config" ] && alias yarn='yarn --use-yarnrc "$XDG_CONFIG_HOME/yarn/config"'
 
 alias grep='grep --color'
 alias tree='tree -C'
