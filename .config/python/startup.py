@@ -9,7 +9,7 @@ from pathlib import Path
 import atexit
 import readline
 
-hist_file = Path(getenv('XDG_DATA_HOME', '~/.local/share')).expanduser() / 'python/history'
+hist_file = Path(getenv('XDG_STATE_HOME', '~/.local/state')).expanduser() / 'python/history'
 
 try:
     readline.read_history_file(hist_file) # read previous history from file
