@@ -26,6 +26,12 @@ prepend_keymap = [
         "d",
     ], run = "plugin diff", desc = "Diff the selected with the hovered file" },
 
+    # kdeconnect-send
+    { on = [
+        "<C-p>",
+        "k",
+    ], run = "plugin kdeconnect-send", desc = "Send selected files via KDE Connect" },
+
     # smart-enter
     { on = "<Enter>", run = "plugin smart-enter", desc = "Enter the child directory, or open the file" },
 ]

@@ -1,24 +1,29 @@
 [[plugin.deps]]
 use = "yazi-rs/plugins:smart-enter"
-rev = "b886025"
-hash = "56fdabc96fc1f4d53c96eb884b02a5be"
+rev = "ac82af3"
+hash = "187cc58ba7ac3befd49c342129e6f1b6"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:chmod"
-rev = "b886025"
-hash = "1adc12c2b2b025411ab61eb8f0879574"
+rev = "ac82af3"
+hash = "f0c8c378184d5f8abd1b095a443d336d"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:diff"
-rev = "b886025"
-hash = "47865a70cade14a0b9b6bc6a54f16bdb"
+rev = "ac82af3"
+hash = "8b1af6b5a69797ee951f2a80ce570818"
 
 [[plugin.deps]]
 use = "ndtoan96/ouch"
-rev = "0742fff"
-hash = "2bd799b42b8e42b8ef100310be71f8d1"
+rev = "406ce6c"
+hash = "f5afc904d5106ee368c8aa2ded43bd74"
+
+[[plugin.deps]]
+use = "Deepak22903/kdeconnect-send"
+rev = "8a6936b"
+hash = "8d43ac149f5cf7b5eea4ce2ebbe8e1ba"
 
 [[flavor.deps]]
 use = "yazi-rs/flavors:catppuccin-mocha"
-rev = "d3fd3a5"
-hash = "288a0dedd5d13b28605cf82c05326dcd"
+rev = "0670801"
+hash = "7dfe41c9c3d9be76da8a844263d0bbed"
